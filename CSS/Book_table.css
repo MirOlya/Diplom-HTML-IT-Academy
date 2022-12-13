@@ -1,0 +1,218 @@
+.Book_table_grey{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #888888;
+}
+.Book_table_grey_title{
+    margin: 30px auto;
+    text-align: center;
+    color: #505050;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'PTSans-Regular', sans-serif;
+    font-weight: bold;
+}
+.Book_table_grey_title span{ color:#505050; font-size: 20px; font-weight: normal;}
+.Book_table_grey_choose{
+    flex-grow:1;
+    flex-shrink:1;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+    margin: 0 0 50px 0;
+    }
+.Book_table_grey_choose_pict{
+    display: flex;
+    flex-grow:0;
+    flex-shrink:1;
+    flex-basis: 300px;
+    height: 326px;
+    /* float: left; */
+}
+.Book_table_grey_choose_footer{
+    display: flex;
+    flex-grow:1;
+    flex-shrink:1;
+    justify-content: center;
+}
+.Book_table_grey_choose_conteiner{
+    flex-grow:0;
+    flex-shrink:1;
+    background-color:#ffffff;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.Book_table_grey_choose_form{
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffffff;
+    padding:10px 10px 10px 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color:#505050;
+    border-color:#d7d7d7;
+}
+.grey{flex-basis: 50px;flex-grow: 0;flex-shrink: 2;}
+.Book_table_grey_choose_form_battons{
+    /* flex-basis: 640px; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center; /*прижимает содержимое к краям */
+    align-items: center; /*выравнивает элементы по центру на вертикальной */
+    color:#ffffff;
+    word-break: break-all;
+    line-height: 1;
+    font-size: 14px;
+}
+.Book_table_grey_choose_form_batton{
+    flex-basis: 100px;/*calc( ( 100% - 60px ) / 4 );*/
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px 5px 10px 5px;
+    height: 90px;
+    max-height: 90px;
+    background-color:#505050;
+    border:solid 1px #505050;
+    display: flex;
+    justify-content: center; /*прижимает содержимое к краям */
+    align-items: center; /*выравнивает элементы по центру на вертикальной */
+    text-align: center;
+    padding: 0;
+    position: relative;
+}
+.grey{flex-basis: 50px;flex-grow: 0;flex-shrink: 1;}
+.red{flex-basis: 50px;flex-grow: 0;flex-shrink: 1;}
+.Book_table_grey_choose_form_batton .red{
+    display: none;
+}
+.selecttable{position: absolute; top: 0px; right: -1px;}
+
+.Book_table_grey_choose_form_batton img:not(.selecttable){
+    padding: 10px;
+}
+.Book_table_grey_choose_form_batton:hover{
+    background-color:#FFFFFF;
+    border:solid 1px #db4f44;
+    color:#db4f44;
+}
+.Book_table_grey_choose_form_batton:hover .red{
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    word-break: break-all;
+    line-height: 1;
+}
+.Book_table_grey_choose_form_batton:hover .grey{
+    display: none;
+}
+.Book_table_grey_choose_form input,select{
+    height: 42px;
+    border: 1px solid #d7d7d7;
+}
+.Book_table_grey_choose_form_inputs{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto max-content;
+    column-gap: 5px;
+    grid-template-areas:
+        'for_you_choise           occasion             preferd_food'
+        'for_you_choise_input     occasion_select     preferd_food_select';
+    word-wrap: normal;
+    margin-right: 10px;
+    display: -ms-grid;
+    -ms-grid-columns: auto;
+    -ms-grid-rows: auto max-content;
+}
+.in1_l{grid-area: for_you_choise;}
+.in1{grid-area: for_you_choise_input;}
+.s1_l{grid-area: occasion;}
+.s1{grid-area: occasion_select;}
+.s2_l{grid-area: preferd_food;}
+.s2{grid-area: preferd_food_select;}
+.Book_table_grey_choose_form_inputs div{
+    height: 70px;
+}
+.Book_table_grey_choose_form_input input,option{
+    font-size: 13px;
+}
+.f_input{margin: 0 10px 0 0;}
+.s_input{margin: 0 10px 0 10px;}
+.t_input{margin: 0 0 0 10px;}
+
+.BookNow{
+    font-family: 'Lato',serif;
+    font-size: 13px;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /*выравнивает элементы по центру на вертикальной */
+    text-align: right;
+}
+.BookNow div{margin-right: 10px;}
+.Book_table_grey_choose_footer input{
+    padding-left: 5px;
+}
+
+@media only all and (max-width: 854px) {
+    .grey{display: none;}
+    .red{display: none;}
+    .Book_table_grey_choose_form_batton:hover .red:not(.selecttable){
+        display: none;
+    }
+    .Book_table_grey_choose_form_inputs{
+
+        row-gap: 5px;
+        grid-template-areas:
+            'for_you_choise  for_you_choise_input'
+            'occasion        occasion_select'
+            'preferd_food    preferd_food_select';
+    }
+}
+@media only all and (max-width: 640px) {
+    .Book_table_grey_choose_form_inputs{
+        margin: 0;
+        grid-template-columns: 168px;
+        grid-template-areas:
+            'for_you_choise'
+            'for_you_choise_input'
+            'occasion'
+            'occasion_select'
+            'preferd_food'
+            'preferd_food_select';
+    }
+    .Book_table_grey_choose_form_batton{
+        margin: 5px 0 5px 0;
+    }
+    .Book_table_grey_choose_form_battons{
+        margin-top: 10px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 60px 60px;
+        grid-template-rows: 60px 60px;
+        column-gap: 5px;
+        row-gap: 5px;
+        grid-template-areas:
+            'person2           person4'
+            'person8           Banquet';
+    }
+    /* .person2{grid-area: person2;}
+    .person4{grid-area: person4;}
+    .person8{grid-area: person8;} */
+    .Banquet{grid-area: Banquet; margin:0;} 
+    .Book_table_grey_choose_form{
+        padding: 10px 0 10px 10px;
+    }
+    .Book_table_grey_choose_form span{line-height: normal;}
+    .Book_table_grey_choose_form_batton{
+        height: 60px;
+        flex-basis: 60px;
+    }
+    .BookNow{
+        flex-direction:column;
+    }
+    .Book_table_grey_choose_pict{height: 225px;}
+}

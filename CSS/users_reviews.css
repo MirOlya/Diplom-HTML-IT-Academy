@@ -1,0 +1,35 @@
+.users_reviews{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 70px 260px);
+    /*grid-template-rows: 65px 100px 100px;*/
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    font-family: 'Lato', serif;
+}
+.user_content{
+    justify-self: start;
+    align-self: center;
+    text-align: left;
+}
+.user_name{
+    font-size: 16px;
+}
+.user_beruf{
+    font-size: 13px;
+}
+.user_coment{
+    margin: 10px 0 10px 0;
+}
+.user_reiting{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 18px);
+    justify-content: center;
+    column-gap: 1px;
+    row-gap: 1px;
+    font-family: 'Lato', serif;
+    font-size: 13px;
+    color:#c7483e;
+    line-height: normal;
+}

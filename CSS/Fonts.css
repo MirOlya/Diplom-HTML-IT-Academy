@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+ @font-face {
+    font-family: Roboto;
+    src: url('webfonts/3964.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: LatoBold;
+    src: url('webfonts/9623.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Myriad_Pro;
+    src: url('webfonts/ofont.ru_Myriad_Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: MrDeHaviland-Regular;
+    src: url('webfonts/MrDeHaviland-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: PTSans-Regular;
+    src: url('webfonts/PTS55F.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* @font-face {
+    font-family: Alice;
+    src: url('webfonts/Alice-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+@font-face {
+    font-family: Lato;
+    src: url('webfonts/9622.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.Roboto_20{
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+}
+.Roboto_30{
+    font-family: 'Roboto',sans-serif;
+    font-size: 30px;
+    color:#505050;
+    text-transform: uppercase;
+}
+.lato_20{
+    font-family: 'Lato',serif;
+    font-size: 20px;
+    color:#878787;
+    text-transform: uppercase;
+}
+.lato_13{
+    font-family: 'Lato',serif;
+    font-size: 13px;
+    color:#999999;
+}
+.lato_25{
+    font-family: 'Lato',serif;
+    font-size: 25px;
+    color:#7b7b7b;
+    text-transform: uppercase;
+}
+.alice_25{
+    font-family: 'Alice',serif;
+    font-size: 25px;
+    color:#8c8c8c;
+}
+.LatoBold_15{
+    font-family: 'LatoBold',serif;
+    font-size: 15px;
+    color:#555555;
+    text-transform: uppercase;
+}
+.Lato_15{
+    font-family: 'Lato',serif;
+    font-size: 15px;
+    color:#666666;
+    text-transform: uppercase;
+}

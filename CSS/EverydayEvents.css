@@ -1,0 +1,96 @@
+.EverydayEvents{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    font-size: 40px;
+    color:#505050;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    background-color:#f3f3f3;
+}
+.EverydayEvents_title{font-size: 20px; font-weight: normal;}
+.events{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,  minmax(400px,1fr));
+    justify-content: center;
+
+    grid-auto-rows: auto;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.event{
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color:#ffffff;
+}
+.event_pict{
+    width: 200px;
+    height: 370px;
+    object-fit: cover;
+}
+.event_text{
+    /* height: 335px; */
+    text-align: start;
+    word-break: break-all;
+}
+.event_data{
+    display: flex;
+    width: 125px;
+    height: 50px;
+    background-color:#db4f44;
+    font-size: 13px;
+    font-family: 'Lato', serif;
+    color:#ffffff;
+    align-items: center;
+    justify-content: center;
+}
+.event_content{
+    margin: 10px;
+    font-family: 'Lato',serif;
+    font-size: 13px;
+    color:#888888;
+}
+.event_title{
+    margin: 10px;
+    font-family: 'Alice',serif;
+    font-size: 30px;
+    color:#3a3a3a;
+    line-height: 1;
+
+}
+.event_WhiteBatton{
+    margin-top: auto;
+    align-self:flex-end;
+}
+.event-right{display: flex; flex-direction: column;}
+.event-right button{
+    width: 155px;
+    height: 45px;
+    color: #808080;
+    align-self:flex-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.EverydayEvents .GreyBatton{
+    width: 155px;
+    height: 45px;
+    background-color: #f3f3f3;
+    align-self:flex-end;
+    border-color:#d0cccc;
+    color:#c7c7c7;
+    margin-top: 30px;
+}
+.events_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: auto 20px;
+}
+.event .WhiteBatton{
+    flex-basis: 50px;
+}

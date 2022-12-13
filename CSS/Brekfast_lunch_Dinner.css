@@ -1,0 +1,225 @@
+.BreakFast_Lunch_Dinner_base{
+    /* display: flex;
+    flex-basis: 1000px;
+    margin: 0 auto; */
+    flex-grow:1;
+    flex-shrink:1;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+}
+.BreakFast_Lunch_Dinner_footer{
+    display: flex;
+    flex-grow:1;
+    flex-shrink:1;
+    justify-content: center;
+}
+.BreakFast_Lunch_Dinner_pict{
+    display: flex;
+    flex-grow:0;
+    flex-shrink:1;
+    flex-basis: 300px;
+    height: 326px;
+    float: left;
+}
+.BreakFast_Lunch_Dinner_pict_lunch{
+    display: flex;
+    flex-grow:0;
+    flex-shrink:1;
+    flex-basis: 300px;
+    height: 326px;
+    /* float: right; */
+}
+.BreakFast_Lunch_Dinner_Text{
+    flex-basis: 540px;
+    padding-left: 10px;
+    text-align: left;
+    flex-direction: column;
+    padding: 0 0 0 10px;
+    font-size: 16px;
+    color:#505050;
+    border-color:#f7f7f8;
+
+    font-family: 'Alice',serif;
+    text-align: left;
+    background-color:#f7f7f8;
+}
+
+.BreakFast_Lunch_Dinner_conteiner{
+    flex-grow:0;
+    flex-shrink:1;
+    background-color:#f7f7f8;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.BreakFast_Lunch_Dinner{
+    display: flex;
+    flex-basis: 530px;
+    flex-grow:0;
+    flex-shrink:1;
+    flex-direction: column;
+    height: 421px;
+    padding: 0 0 0 10px;
+    font-size: 16px;
+    color:#505050;
+    border-color:#d7d7d7;
+
+    font-family: 'Alice',serif;
+    text-align: left;
+    background-color:#f7f7f8;
+}
+.Lunch{
+    font-family: 'Alice',serif;
+    text-align: right;
+    background-color:#f7f7f8;
+    padding: 0 10px 0 0;
+}
+.BreakFast_Lunch_Dinner_left{
+    display: flex;
+    flex-shrink: 1;
+    flex-grow:0;
+    flex-direction:column;
+    margin-top: 10px;
+}
+.BreakFast_Lunch_Dinner_right{
+    display: flex;
+    flex-shrink: 1;
+    flex-grow:0;
+    flex-direction:column;
+    margin: 10px 10px 0 0;
+
+    align-items:flex-end;
+}
+.Breakfast{
+    font-family: 'Alice',serif;
+    font-size: 60px;
+    margin-bottom: 5px;
+    flex-shrink: 1;
+    flex-grow:0;
+}
+.BreakFast_Lunch_Dinner_Starts{font-family: 'Lato',serif; font-size: 16px; color:#767676;}
+.BreakFast_Lunch_Dinner_menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 165px);
+    column-gap: 5px;
+    row-gap: 20px;
+    font-family: 'Lato',serif;
+}
+.BreakFast_Lunch_Dinner_menu_right{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 165px);
+    column-gap: 5px;
+    row-gap: 20px;
+    font-family: 'Lato',serif;
+    justify-content: flex-end;
+    margin: 0 10px 0 0;
+}
+.BreakFast_Lunch_Dinner_food{
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 165px;
+    height: 240px;
+    background-color:#ffffff;
+    border: 1px solid #e1e1e1;
+}
+.BreakFast_Lunch_Dinner_food_modal{
+    margin-top: 10px;
+    margin-right: 10px;
+    flex-basis: 300px;
+    height: auto;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction:row;
+    flex-grow:1;
+    flex-shrink:1;
+}
+.BreakFast_Lunch_Dinner_food_lunch{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 165px;
+    height: 240px;
+    background-color:#ffffff;
+    border: 1px solid #e1e1e1;
+}
+.Breakfast_hr{
+    margin: 15px 0 15px 0;
+    border-color:#d7d7d7;
+    width: 100%;
+}
+.BreakFast_Lunch_Dinner_food_pict{
+    width: 165px;
+    height: 100px;
+}
+.BreakFast_Lunch_Dinner_food_pict_modal{
+    width: 100%;
+    height: auto;
+}
+.menu_redflag{
+    flex-basis: 85px;
+    flex-shrink:1;
+    background-color:#f7f7f8;
+    position: relative;
+    display:flex;
+}
+img#BreakFast_l:hover{box-shadow: 0 0 5px 2px #db4f44;}
+img#BreakFast_r:hover{box-shadow: 0 0 5px 2px #e1e1e1;}
+.customer_review{
+    margin-top: -9px;
+}
+.bld_price{
+    font-size: 25px;
+    color:#db4f44;
+}
+.BreakFast_Lunch_Dinner_food .bld_nam{
+    font-size: 13px;
+    color:#888888;
+}
+.BreakFast_Lunch_Dinner_food .bld_cont{
+    font-size: 10px;
+    color:#888888;
+}
+
+.BreakFast_Lunch_Dinner_food img {
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+    
+.BreakFast_Lunch_Dinner_food img:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+/* .Experianse_picture .Experianse_picture_sel {
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+    
+.Experianse_picture .Experianse_picture_sel:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+} */
+
+
+@media only all and (max-width: 640px) {
+    .customer_review{
+        display: none;
+    }
+    .Breakfast{
+        font-size: 40px;
+    }
+    .BreakFast_Lunch_Dinner_pict_lunch {
+        height: 318px;
+    }
+    .menu_redflag {
+        flex-basis: 0;
+    }
+}

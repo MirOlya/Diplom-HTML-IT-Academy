@@ -1,0 +1,49 @@
+.footer_base{
+    background-color:#222222;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    /* height: 134px; */
+}
+.footer_logo{
+    position: relative;
+    top: -74px;
+    flex-basis: 145px;
+    flex-shrink: 1;
+}
+.footer{
+    font-family: 'lato', serif;
+    font-size: 13px;
+    color:#535353;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: 50px;
+    justify-content: center;
+    align-items:center;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas: 
+    'Designed social_network _Year';
+   position: relative;
+   top: -74px;
+   margin: 0 10px;
+   /* display: -ms-grid; */
+   /* -ms-grid-columns: 1fr 1fr 1fr;
+   -ms-grid-rows: 17px 16px 17px; */
+}
+.Designed {
+    grid-area: Designed;
+} 
+.social_network{
+    grid-area: social_network;
+    padding-inline-start: 0px;
+}
+._Year{
+    grid-area: _Year;
+}
+@media only all and (max-width: 250px) {
+    .Designed{
+        display: none;
+    }    
+}

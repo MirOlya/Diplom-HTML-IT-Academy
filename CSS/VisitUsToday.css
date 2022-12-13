@@ -1,0 +1,223 @@
+.VisitUsToday_base{
+    width: 100%;
+    height: max-content;
+    margin: auto auto;
+    padding: 50px 0 150px 0;
+    text-align: center;
+    background-color: #f3f3f3;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+.VisitUsToday{
+    display: flex;
+    flex-basis: 814px;
+    margin: 0 auto;
+    flex-grow:1;
+    flex-shrink:1;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+}
+.VisitUsToday_footer{
+    display: flex;
+    flex-grow:1;
+    flex-shrink:1;
+    justify-content: center;
+}
+.VisitUsToday_pict{
+    display: flex;
+    flex-grow:0;
+    flex-shrink:1;
+    flex-basis: 300px;
+    height: 326px;
+    float: left;
+}
+.VisitUsToday_conteiner{
+    flex-grow:0;
+    flex-shrink:1;
+    background-color:#ffffff;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.VisitUsToday_Text{
+    flex-basis: 540px;
+    padding-left: 10px;
+    text-align: left;
+}
+.VisitUsToday_Text_Title{
+    color:#505050;
+    font-family: 'Alice',sans-serif;
+    font-size: 40px;
+}
+.VisitUsToday_Text_Context{
+    color:#888888;
+    font-family: 'Lato',sans-serif;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.WeAreOpenAt{
+    display: flex;
+    width: 808px;
+    flex-grow: 0;
+    flex-shrink:1;
+    justify-content: center;
+    background-color:#ffffff;
+    height: 30px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.WeAreOpenAt_HR{
+    display: flex;
+    flex-shrink:1;
+    color: #e2e2e2;
+    width: 100%;
+}
+.VisitUsToday_WeOpen{
+    text-align: left;
+    grid-area: header;
+}
+.WeAreOpenAt_schedule_conteiner{
+    display:flex; 
+    background-color:#ffffff; 
+    /* flex-basis: 840px;  */
+    flex-shrink:1;
+    flex-grow:1;
+}
+.WeAreOpenAt_schedule{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px;
+    grid-column-gap: 9px;
+    grid-auto-rows: minmax(50px, max-content);
+    align-items:center ;
+    justify-content: center;
+    grid-template-areas: 
+    'header        header        header        header'
+    'schedule_day1 schedule_day2 schedule_day3 schedule_day4'
+    'schedule_day5 schedule_day6 schedule_day7 .'
+    'futer         futer         futer         futer';
+    margin: 0 0 30px 0;
+}
+.WeAreOpenAt_schedule_OneDay{
+    display: grid;
+    grid-template-columns: 82px 104px;
+    grid-column-gap: 9px;
+    grid-auto-rows: max-content;
+    align-items:center;
+    justify-content: center;
+    grid-template-areas: 'day  time';
+}
+.WeAreOpenAt_schedule_OneDay_fl{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 50px;
+}
+.WeAreOpenAt_schedule_Day_fl{
+    font-family: 'Lato',sans-serif;
+    font-size: 13px;
+    color:#fbf3f2;
+    background-color:#c7483e;
+    border: #c7483e 1px solid;
+    border-radius: 5px;
+    flex-basis: 101px;
+    flex-shrink:0;
+    align-items:center;
+    justify-content: center;
+    height: 50px;
+
+}
+.WeAreOpenAt_schedule_Time_fl{
+    font-family: 'Lato',sans-serif;
+    font-size: 13px;
+    color:#888888;
+    grid-area: time;
+    border: #bababa 1px solid;
+    border-radius: 5px;
+    flex-basis: 101px;
+    flex-shrink:0;
+    align-items:center;
+    justify-content: center;
+    height: 50px;
+}
+.WeAreOpenAt_schedule_Day{
+    font-family: 'Lato',sans-serif;
+    font-size: 13px;
+    color:#fbf3f2;
+    background-color:#c7483e;
+    border: #c7483e 1px solid;
+    border-radius: 5px;
+    grid-area: day;
+    /* align-self: stretch; */
+    line-height: 30px;
+}
+.WeAreOpenAt_schedule_Time{
+    font-family: 'Lato',sans-serif;
+    font-size: 13px;
+    color:#888888;
+    grid-area: time;
+    border: #bababa 1px solid;
+    border-radius: 5px;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+@media only all and (max-width: 830px) {
+    .WeAreOpenAt_schedule_Time{
+        line-height: normal;
+    }
+    .WeAreOpenAt_schedule{
+        grid-template-areas: 
+    '.header         header        header        .'
+    '.schedule_day1  schedule_day2 schedule_day3 .'
+    '.schedule_day4  schedule_day5 schedule_day6 .'
+    '.schedule_day7  .             .             .'
+    '.futer          futer         futer         .';
+    }
+}
+@media only all and (max-width: 640px) {
+    .WeAreOpenAt_schedule{
+        grid-template-areas: 
+    '.header         header        .'
+    '.schedule_day1  schedule_day2 .'
+    '.schedule_day3  schedule_day4 .'
+    '.schedule_day5  schedule_day6 .'
+    '.schedule_day7  .             .'
+    '.futer          futer         .';
+    }
+    .WeAreOpenAt_schedule_OneDay{
+        display: grid;
+        grid-template-columns: 75px 93px;
+        grid-column-gap: 5px;
+    }
+}
+@media only all and (max-width: 540px) {
+    .WeAreOpenAt_schedule{
+        grid-template-areas: 
+    '.header         .'
+    '.schedule_day1  .'
+    '.schedule_day2  .'
+    '.schedule_day3  .'
+    '.schedule_day4  .'
+    '.schedule_day5  .'
+    '.schedule_day6  .'
+    '.schedule_day7  .'
+    '.futer          .';
+    }
+    .WeAreOpenAt_schedule_OneDay{
+        display: grid;
+        grid-template-columns: 75px 93px;
+        grid-column-gap: 5px;
+    }
+    .VisitUsToday_Text{
+        flex-basis: 200px;
+    }
+}
+.WeAreOpenAt_schedule_Futer{
+    font-family: 'Lato',sans-serif;
+    font-size: 13px;
+    color:#adadad;
+    grid-area: futer;
+    text-align: left;
+}

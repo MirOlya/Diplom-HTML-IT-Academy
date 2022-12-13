@@ -1,0 +1,141 @@
+.mainmenu_Table_Number{
+    top:0;
+    height: 300px;
+}
+.mainmenu_header_pict{
+    height: 450px;
+    width: 100%;
+    background-image: url('..//images/spaghetti-shot.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainmenu_main_text_pic{
+   background-image:none;
+   background-color: #ffffff; 
+}
+.mainmenu_Text_small_line{
+    margin-top: 100px;
+}
+.mainmenu_Text_big{
+    margin-bottom: 100px;
+}
+.main_menu_content{
+    width: 100%;
+    background-color:#f3f3f3;
+    padding-bottom: 100px;
+}
+.main_menu_select_your_food{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content;
+    grid-template-areas: 
+    'title   title   button  button'
+    'select1 select2 select3 select4';
+    column-gap: 5px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 1px solid #c9c9c9;
+};
+.main_menu_select_your_food select:focus{box-shadow:none;}
+.main_menu_select_your_food_title_big{
+    grid-area: title;
+    line-height: normal;
+}
+.main_menu_time_of_day{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.main_menu_select_your_food_button{
+    grid-area: button;
+    justify-self: flex-end;
+}
+.main_menu_select_your_food_time{
+    display: flex;    
+    align-items: center;
+    margin: 10px;
+}
+.main_menu_select_your_food_time_t{
+    padding: 0 20px 0 10px;
+    border-right: 1px solid #bbbbbb;
+}
+.main_menu_select_your_food_result_t{
+    margin-left: 15px;
+}
+.card-footer .btn-group .greenbtn{
+    background-color:#71ab01!important;
+    color: #ffffff!important;
+    text-transform: uppercase;
+    border-color: #71ab01!important;
+    display: none;
+}
+.redbtn{
+    background-color:#c8483f!important;
+    color: #ffffff!important;
+    text-transform: uppercase;
+    border-color: #c8483f!important;
+}
+.btn-check:checked~.selectrecipe{
+    visibility:visible;
+}
+.btn-check:checked~.greenbtn{
+    display: block;
+}
+.btn-check:checked~.notyetselect{
+    display: none;
+}
+.card-footer .btn-group :not(.btn-check:checked)~.notyetselect{
+    border-top-right-radius:0.25rem;
+    border-bottom-right-radius:0.25rem;
+    background-color:inherit;
+    box-shadow: none;
+}
+.card-footer .btn-group :not(.btn-check:checked)~.greenbtn{
+    border-top-left-radius:0.25rem;
+    border-bottom-left-radius:0.25rem;
+}
+
+.selectrecipe{
+    visibility: hidden;
+}
+.card-footer span{vertical-align: middle;}
+.btn-group{width: 140px;}
+.btn_check:focus, .notyetselect, .btn-group .notyetselect:hover{
+    background-color:inherit;
+    color: #c8483f !important;
+    border-color: #c8483f!important;
+}
+.carousel-footer{
+    position: relative;
+    margin: 10px 10px;
+    height: 64px;
+}
+.carousel-footer .carousel-indicators [data-bs-target]{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color:#999999;
+}
+.carousel-footer .carousel-indicators .active{
+    background-color:black;
+}
+select[id^='specificSizeSelect']:focus {
+    box-shadow: 2px 0 10px #dadada;
+    border-color: #dadada;
+}
+
+.main_menu_content img {
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+    
+.main_menu_content img:hover{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+

@@ -1,0 +1,77 @@
+.chefs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 720px;
+    column-gap: 1px;
+    justify-items: center;
+    align-items: center;
+    background-color:#292929;
+    font-family: 'Alice',serif;
+    color:#ffffff;
+}
+.chefs_pict{
+    display: flex;
+    flex-basis:500px;
+    flex-direction:row ;
+    flex-shrink:1;
+    flex-grow:0;
+    position: relative;
+    align-self:end;
+}
+.chef_3{
+    z-index: 1;
+    position: absolute;
+    left: 100px;
+}
+.chef_2{
+    position: absolute;
+    left: 180px;
+}
+.chefs_text{
+    justify-self: start;
+}
+.chefs_pict div:hover{z-index: 2;}
+.chef_familie{
+    align-self:center;
+    z-index: 2;
+    line-height: 1;
+}
+.chef_list_element{
+    list-style:none;  
+    word-break: break-all;
+    /* width: 300px; */
+}
+.chef_list_element_name{font-size: 16px; vertical-align: middle;}
+.chef_list_element:before{
+    display: inline-block;
+    vertical-align: middle;
+    content: url('../images/Potoshop/cheflist.png');
+    margin-right: 5px;
+}
+.chef_list_element_descr{
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    color:#828282;
+    margin-left: 41px;
+    word-break: break-word;
+}
+.chef_familie_Meet{
+    font-size: 36px;
+    flex-shrink: 1;
+}
+.chef_familie_Chefs{
+    font-size: 120px;
+    flex-shrink: 1;
+}
+/* @media only all and (max-width: 620px) {
+    .chef_familie_Chefs{
+        font-size: 100px;
+} */
+@media only all and (max-width: 620px) {
+    .chef_familie_Chefs{
+        font-size: 60px;
+    }
+    .chefs_pict{
+        overflow: hidden;
+    }
+}

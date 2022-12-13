@@ -24,29 +24,30 @@
     <script src='JS/firstjs.js'></script>
     <header class="header">
         <div id="mySidepanel" class="sidepanel">
-            <a href="javascript:void(0)" title = 'Close wimdow' class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <ul>
-                <li><a href="index.html" title='Go to the main page'>Home</a></li>
-                <li><a href="main_menu.html" title='Go to the menu page'>Menu</a></li>
-                <li><a href="main_events.html" title='Go to the news page'>News</a></li>
-                <li><a href="#top" title='Go to the contact page'>Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="main_menu.html">Menu</a></li>
+                <li><a href="main_events.html">News</a></li>
+                <li><a href="#top">Contact</a></li>
             </ul>
         </div>
           
         <button class="openbtn" onclick="openNav()">&#9776;</button>
+
         <ul class="menu" name="top" id="top">
-            <li><a href="index.html" title='Go to the main page'>Home</a></li>
-            <li><a href="main_menu.html" title='Go to the menu page'>Menu</a></li>
-            <li><a href="main_events.html" title='Go to the news page'>News</a></li>
-            <li><a href="#top" title='Go to the contact page'>Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="main_menu.html">Menu</a></li>
+            <li><a href="main_events.html">News</a></li>
+            <li><a href="#top">Contact</a></li>
         </ul>
          <div class="logo">
-            <a href="index.html" title='Go to the main page'><img src="images/Potoshop/Logo_footer2.png" alt="Go to the main page" title='Go to the main page'></a>
+            <a href="index.html"><img src="images/Potoshop/Logo_footer2.png" alt=""></a>
         </div>
         <ul class="social_network">
-            <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank" title='Go to the facebook page'></a></li>
-            <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank" title='Go to the twitter page'></a></li>
-            <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank" title='Go to the linkedin page'></a></li>
+            <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+            <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+            <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
         </ul>
     </header>
     <content class="content">
@@ -63,7 +64,7 @@
 
         <div class="main_menu_content">
             <div class="contact_us_content">
-                <img src="images/contaktus/food-3214904_640.jpg" alt="Contact US" class="contact_img" alt="Come and enjoy our delicious menu. You will be satisfied :)" title='Come and enjoy our delicious menu. You will be satisfied :)'>
+                <img src="images/contaktus/food-3214904_640.jpg" alt="Contact US" class="contact_img">
                 <div class="contact_info">
                     <div style='grid-area: office;'>
                         <h6 class="LatoBold_15">Head Office</h6>
@@ -94,7 +95,7 @@
                             <textarea type="textarea" name='your_mes' class="lato_13 contact_input contact_textarea"></textarea>
                         </div>
                     </div>
-                    <button class="red_button submit_grey LatoBold_15" title=''>submit now</button>
+                    <button class="red_button submit_grey LatoBold_15">submit now</button>
                 </div>
             </div>
         </div>
@@ -127,14 +128,14 @@
     </content>
     <footer class="footer_base">
         <div class="footer_logo">
-            <a href="index.html"><img src="images/Potoshop/Logo_footer.png"  alt="Our restaurant logo" title='Our restaurant logo'></a>
+            <a href="index.html"><img src="images/Potoshop/Logo_footer.png" alt=""></a>
         </div>
         <div class="footer">
             <div class='Designed'>Exclusively designed by Olga Miranovich</div>
             <ul class="social_network social_network_footer">
-                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank" title='Go to the facebook page'></a></li>
-                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank" title='Go to the twitter page'></a></li>
-                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank" title='Go to the linkedin page'></a></li>
+                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
             </ul>
             <div class="_Year" >2021 Awesome Spices Psd Layout</div>
         </div>
@@ -142,38 +143,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
-    <div id="tooltip"></div>
     <script>
         $(document).ready(function(){$('button').on('click', function(){ 
-            if ($(this).attr("onClick") === undefined)  {
-                if ($(this).attr('url') === undefined) {
-                    window.location.href ='main404.html';
-                    $(this).toggleClass('tooltip', true);
-                }
-                else {
-                window.location.href = $(this).attr('url');};
-            }
-        });
-
-        $("button").mousemove(function (eventObject) {
-            $data_tooltip = $(this).attr("data-tooltip") === undefined?"The button's action has not yet been described. Go to 404.":$(this).attr("data-tooltip");
-            if ($(this).attr("onClick") === undefined) 
-                if ($(this).attr('url') === undefined) 
-                $("#tooltip").html($data_tooltip)
-                    .css({ 
-                        "top" : eventObject.pageY + 10,
-                        "left" : eventObject.pageX -250
-                    })
-                    .show();
-                }).mouseout(function () {
-                    $("#tooltip").hide()
-                    .html("")
-                    .css({
-                        "top" : 0,
-                        "left" : 0
-                    });
-                    });
-
+            if ($(this).attr("onClick") === undefined) {
+    	    //window.location.href = $(this).attr('url');
+    	    window.location.href = isNaN($(this).attr('url'))?'main404.html':$(this).attr('url');
+        }
+        })
         });
     </script>
 </body>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="images/icon/OM.ico" title='Exclusively designed by Olga Miranovich'>
+    <link rel="shortcut icon" href="images/icon/OM.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="CSS/Icon.css">
     <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap-grid.css" rel="stylesheet" type="text/css">
-    <title>Spices Home. Exclusively designed by Olga Miranovich.</title>
+    <title>Spices Home</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
@@ -38,12 +38,11 @@
         <div class="popup">
             <button class="close" title="Close window" onclick="swa2()"></button>
             <div class="BreakFast_Lunch_Dinner_food_modal">
-                <div><img id = 'BreakFast_Lunch_Dinner_food_pict_modal' class="BreakFast_Lunch_Dinner_food_pict_modal" src="" alt="Your chosen dish" title='Your chosen dish'></div>
-                <div style="padding: 10px 10px 10px 10px; flex-shrink: 3;">
-                    <p id='_1_modal' class = 'bld_price'></p>
-                    <p id='_2_modal' class = 'bld_nam'></p>
-                    <p id='_3_modal' class = 'bld_cont'></p>
-                    <p id='_4_modal' class = 'bld_cont'></p>
+                <div><img id = 'BreakFast_Lunch_Dinner_food_pict_modal' class="BreakFast_Lunch_Dinner_food_pict_modal" src="" alt=""></div>
+                <div style="padding: 10px 10px 10px 10px;">
+                    <span id='_1_modal' class = 'bld_price'>$ 12.49</span><br>
+                    <span id='_2_modal' class = 'bld_nam'>Recipe name</span><br>
+                    <span id='_3_modal' class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                 </div>
             </div>
         </div>
@@ -52,29 +51,44 @@
     <script src='JS/firstjs.js'></script>
     <header class="header">
         <div id="mySidepanel" class="sidepanel">
-            <a href="javascript:void(0)" title = 'Close wimdow' class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <ul>
-                <li><a href="#top" title='Go to the main page'>Home</a></li>
-                <li><a href="main_menu.html" title='Go to the menu page'>Menu</a></li>
-                <li><a href="main_events.html" title='Go to the news page'>News</a></li>
-                <li><a href="main_contact.html" title='Go to the contact page'>Contact</a></li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="main_menu.html">Menu</a></li>
+                <li><a href="main_events.html">News</a></li>
+                <li><a href="main_contact.html">Contact</a></li>
             </ul>
         </div>
           
         <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <!-- <div class="dropdown">
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <object type="image/svg+xml" data="menu.svg">
+                    <img class='dropdown_icon' src="images/menu.svg" alt="Фолбэк">
+                </object>
+            </label>
+            <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a href="main_menu.html">Menu</a></li>
+                <li><a href="main_events.html">News</a></li>
+                <li><a href="#top">Pages</a></li>
+                <li><a href="main_contact.html">Contact</a></li>
+            </ul>
+        </div> -->
         <ul class="menu" name="top" id="top">
-            <li><a href="#top" title='Go to the main page'>Home</a></li>
-            <li><a href="main_menu.html" title='Go to the menu page'>Menu</a></li>
-            <li><a href="main_events.html" title='Go to the news page'>News</a></li>
-            <li><a href="main_contact.html" title='Go to the contact page'>Contact</a></li>
-        </ul>
+            <li class="menu_a"><a href="#top">Home</a></li>
+            <li><a href="main_menu.html">Menu</a></li>
+            <li><a href="main_events.html">News</a></li>
+            <li><a href="main_contact.html">Contact</a></li>
+         </ul>
          <div class="logo">
-            <a href="#top" title='Go to the main page'><img src="images/Potoshop/Logo_footer2.png" alt="Go to the mein page" title='Go to the mein page'></a>
+            <a href="#top"><img src="images/Potoshop/Logo_footer2.png" alt=""></a>
         </div>
         <ul class="social_network">
-            <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank" title='Go to the facebook page'></a></li>
-            <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank" title='Go to the twitter page'></a></li>
-            <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank" title='Go to the linkedin page'></a></li>
+            <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+            <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+            <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
         </ul>
     </header>
     <content class="content">
@@ -103,32 +117,36 @@
                 <div class="Table_Number_Red_Left">
                     <div class='Table_Number_Red_Left_CallUs'>Call us at our 24hr number</div>
                     <div>
-                        <a href="main404.html" class="fas fa-phone-alt" title='Give us a call'></a> <span class='Table_Number_Red_Left_MyTel'>+375 29 691-00-59</span>
+                        <a href="" class="fas fa-phone-alt"></a> <span class='Table_Number_Red_Left_MyTel'>+375 29 691-00-59</span>
                     </div>
                 </div>
                 <div class="Table_Number_Red_Center">
                     <div class='Or'>Or</div>
                 </div>
                 <div class="Table_Number_Red_Right">
-                    <button class="WhiteBatton" url='main_menu.html' type="button" title='Go to the page to select the menu'>
+                    <button class="WhiteBatton" url='main_menu.html' type="button">
                         ORDER NOW
                     </button>
                 </div>
             </div>
             <div class = 'Experianse_all'>
                 <div class="Experianse_text">
-                    <img src="images/Potoshop/Logo2_black.png" alt="Our restaurant logo" title='Our restaurant logo'><br>
+                    <img src="images/Potoshop/Logo2_black.png" alt=""><br>
                     Experianse the best food<br>
                     <span>our feature recipes</span>
                 </div>
                 <div class="Experianse_picture">
-                    <div class="Experianse_picture_small Experianse_picture_small_1l Experianse_picture_sel" title='French fries for you and your kids for lunch'></div>
-                    <div class="Experianse_picture_small Experianse_picture_small_2l Experianse_picture_sel" title='Fried eggs with ham and tomatoes'></div>
-                    <div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel" title='Fried mushrooms with croutons and vegetables'></div>
-                    <div  class="Experianse_picture_big Experianse_picture_sel" title='Balyk with canned vegetables'></div>
-                    <div class="Experianse_picture_small Experianse_picture_small_3r Experianse_picture_sel" title='Chicken breast under a fur coat'></div>
-                    <div class="Experianse_picture_small Experianse_picture_small_2r Experianse_picture_sel" title='Chocolate pancakes'></div>
-                    <div class="Experianse_picture_small Experianse_picture_small_1r Experianse_picture_sel" title='Pancakes with jam'></div>
+                    <!-- <input id="Experianse_picture_small_1l" class = "ch" type="radio" name="answer" value="1" checked><div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel"></div>
+                    <input id="Experianse_picture_small_2l" class = "ch" type="radio" name="answer" value="1"><div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel"></div>
+                    <input id="Experianse_picture_small_3l" class = "ch" type="radio" name="answer" value="1"><div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel"></div> -->
+
+                    <div class="Experianse_picture_small Experianse_picture_small_1l Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_2l Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel"></div>
+                    <div  class="Experianse_picture_big Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_3r Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_2r Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_1r Experianse_picture_sel"></div>
                     <div class="Experianse_picture_green"></div>
                 </div>
                 <div class="Experianse_footer">
@@ -139,7 +157,7 @@
                         But I must explain to you how all this mistaken idea of denouncing<br>
                         pleasure and praising point
                     </div>
-                    <button class="Experianse_footer_button red_button" title='View dish information'>
+                    <button class="Experianse_footer_button red_button">
                         know more
                     </button>
                 </div>
@@ -148,7 +166,7 @@
 
         <div class="Book_table_grey">
             <div class = "Book_table_grey_title">
-                <img src="images/Potoshop/Logo3.png" alt="Our restaurant logo" title='Our restaurant logo' style="margin-bottom: 10px;">
+                <img src="images/Potoshop/Logo3.png" alt="" style="margin-bottom: 10px;">
                 <div>
                     best of dinning experiance<br>
                     <span>book your's table now</span>
@@ -157,31 +175,63 @@
             <div class="Book_table_grey_choose">
                 <div class="Book_table_grey_choose_footer">
                     <div class="Book_table_grey_choose_conteiner">
-                        <img class="Book_table_grey_choose_pict" src="images/bread-1836411_1920.jpg" alt="Best breakfast&mdash;eggs and bacon" title='Best breakfast&mdash;eggs and bacon'>
+                        <img class="Book_table_grey_choose_pict" src="images/bread-1836411_1920.jpg" alt="">
                     </div>
                     <div class="Book_table_grey_choose_form">
                         <span>Select your dining space</span>
                         <div class="Book_table_grey_choose_form_battons">
-                            <div class="Book_table_grey_choose_form_batton person2" style="margin-left: 0px;" onclick="putSelectTable(this,2)">
-                                <img class='grey' src="images/Potoshop/2Table.png" alt="Table for two people" title='Table for two people'>
-                                <img class= 'red' src="images/Potoshop/2TableRed.png" alt="Table for two people selected" title='Table for two people selected'>
-                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="Table for two people selected" title="Table for two people selected">
-                                02 person
+                            <!-- <ul style='display: inline-flex; padding-left: 0;'>
+                                <li>
+                                    <div class="Book_table_grey_choose_form_batton person2" style="margin-left: 0px;" >
+                                        <img class='grey' src="images/Potoshop/2Table.png" alt="">
+                                        <img class= 'red' src="images/Potoshop/2TableRed.png" alt="">
+                                        <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                        <div>02<br>person</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="Book_table_grey_choose_form_batton person4">
+                                        <img class='grey' src="images/Potoshop/4Table.png" alt="">
+                                        <img class='red' src="images/Potoshop/4TableRed.png" alt="">
+                                        <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                        04<br>person
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="Book_table_grey_choose_form_batton person8">
+                                        <img class='grey' src="images/Potoshop/8Table.png" alt="">
+                                        <img class= 'red' src="images/Potoshop/8TableRed.png" alt="">
+                                        <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                        08<br>person
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="Book_table_grey_choose_form_batton Banquet" style="margin-right: 0px; ">
+                                        <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                        Book Banquet
+                                    </div>
+                                </li>
+                            </ul> -->
+                            <div class="Book_table_grey_choose_form_batton person2" style="margin-left: 0px;" >
+                                <img class='grey' src="images/Potoshop/2Table.png" alt="">
+                                <img class= 'red' src="images/Potoshop/2TableRed.png" alt="">
+                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                <div>02<br>person</div>
                             </div>
-                            <div class="Book_table_grey_choose_form_batton person4" onclick="putSelectTable(this,4)">
-                                <img class='grey' src="images/Potoshop/4Table.png" alt="Table for four people" title='Table for four people'>
-                                <img class='red' src="images/Potoshop/4TableRed.png" alt="Table for four people selected" title='Table for four people selected'>
-                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="Table for four people selected" title='Table for four people selected'>
-                                04 person
+                            <div class="Book_table_grey_choose_form_batton person4">
+                                <img class='grey' src="images/Potoshop/4Table.png" alt="">
+                                <img class='red' src="images/Potoshop/4TableRed.png" alt="">
+                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                04<br>person
                             </div>
-                            <div class="Book_table_grey_choose_form_batton person8" onclick="putSelectTable(this,8)">
-                                <img class='grey' src="images/Potoshop/8Table.png" alt="Table for eight people" title='Table for eight people'>
-                                <img class= 'red' src="images/Potoshop/8TableRed.png" alt="Table for eight people selected" title='Table for eight people selected'>
-                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="Table for eight people selected" title='Table for eight people selected'>
-                                08 person
+                            <div class="Book_table_grey_choose_form_batton person8">
+                                <img class='grey' src="images/Potoshop/8Table.png" alt="">
+                                <img class= 'red' src="images/Potoshop/8TableRed.png" alt="">
+                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                08<br>person
                             </div>
-                            <div class="Book_table_grey_choose_form_batton Banquet" onclick="putSelectTable(this,10)">
-                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="Table for banquet selected" title='Table for banquet selected'>
+                            <div class="Book_table_grey_choose_form_batton Banquet">
+                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
                                 Book Banquet
                             </div>
                         </div>
@@ -189,7 +239,7 @@
     
                         <div class="Book_table_grey_choose_form_inputs">
                             <label class='in1_l' for="in1"> For your choise</label>
-                            <input class='in1' id = "in1" type="text" name="in1" placeholder="For your choise" />
+                            <input class='in1' id = "in1" type="text" name="in1" placeholder="For your choise" >
                             <label class="s1_l" for="in2">Occasion</label>
                             <select class='s1' name="Occasion">
                                 <option id = 'in2' value="1" selected>Aniversary</option>
@@ -224,7 +274,7 @@
         <div class="RedMobile">
             <div class="RedMobile1000">
                 <div class="RedMobile_pict">
-                    <img src="images/Potoshop/Tel.png" alt="Our telephone" title='Our telephone' style="margin-bottom: 10px;"><br>
+                    <img src="images/Potoshop/Tel.png" alt="" style="margin-bottom: 10px;"><br>
                 </div>
                 <div class="RedMobile_conten">
                     <div class="RedMobile_conten_big">
@@ -241,7 +291,7 @@
         </div>
         
         <div class="CompleteYoureDay">
-            <img src="images/Potoshop/Logo5White.png" alt="Our restaurant logo" title='Our restaurant logo' style="margin-bottom: 10px;"><br>
+            <img src="images/Potoshop/Logo5White.png" alt="" style="margin-bottom: 10px;"><br>
             <div style="margin-bottom: 20px; text-transform: uppercase;">
                 Complete Your Day<br>
                 <span>all day food solutions</span>
@@ -249,7 +299,7 @@
             <div class="BreakFast_Lunch_Dinner_base">
                 <div class="BreakFast_Lunch_Dinner_footer">
                     <div class='BreakFast_Lunch_Dinner_conteiner'>
-                        <img class="Book_table_grey_choose_pict" src="images/mainpage/breakfast-21707_640.jpg" alt="The best breakfast for our dear visitors" title='The best breakfast for our dear visitors'>
+                        <img class="Book_table_grey_choose_pict" src="images/mainpage/breakfast-21707_640.jpg" alt="">
                     </div>
                     <div class="BreakFast_Lunch_Dinner_Text BreakFast_Lunch_Dinner_conteiner">
                         <div class="BreakFast_Lunch_Dinner_left">
@@ -263,57 +313,35 @@
                                 <div class="carousel-item active">
                                 <div class="BreakFast_Lunch_Dinner_menu">
                                     <div id='br1' class="BreakFast_Lunch_Dinner_food">
-                                        <div>
-                                            <img id='br_img_1' class="BreakFast_Lunch_Dinner_food_pict" src="images/orange-cake-398966_640.jpg"  alt="Orange cake" title='Orange cake'>
-                                            <div style="padding: 10px 10px 10px 10px;">
-                                                <span id='br_price_1' class = 'bld_price'>$ 5.99</span><br>
-                                                <span id='br_title_1' class = 'bld_nam'>Orange cake</span><br>
-                                                <span id='br_info_1' class = 'bld_cont'>A fragrant, tender, lush orange pie that beckons to pour the seagulls.</span>
-                                            </div>
+                                        <img id='br_img_1' class="BreakFast_Lunch_Dinner_food_pict" src="images/orange-cake-398966_640.jpg" alt="">
+                                        <div style="padding: 10px 10px 10px 10px;">
+                                            <span id='br_price_1' class = 'bld_price'>$ 12.49</span><br>
+                                            <span id='br_title_1' class = 'bld_nam'>Recipe name</span><br>
+                                            <span id='br_info_1' class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                         </div>
-                                        <button class="red_button_small" onclick="swa('br','1');" type="button"  title='View dish information'>
+                                        <button class="red_button_small" onclick="swa('br','1');" type="button">
                                             Know More
                                         </button>
                                     </div>
                                     <div id='br2' class="BreakFast_Lunch_Dinner_food">
-                                        <div>
-                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/food-1247612_640.jpg" alt="Chocolate pancakes" title='Chocolate pancakes'>
-                                            <div style="padding: 10px 10px 10px 10px;">
-                                                <span class = 'bld_price'>$ 8.99</span><br>
-                                                <span class = 'bld_nam'>Chocolate pancakes</span><br>
-                                                <span class = 'bld_cont'> 300 ml of milk;,<br>
-                                                    2 eggs;,<br>
-                                                    2 tbsp cocoa powder;<br>
-                                                    1 tsp baking powder;<br>
-                                                    4 tbsp granulated sugar;<br>
-                                                    ½ tsp salt and vanilla;<br>
-                                                    1 tbsp vegetable oil.<br>
-                                                </span>
-                                                <span class = 'bld_cont' style="display: none;">Chocolate pancakes are prepared very quickly and with a small amount of available ingredients, so they will be a wonderful breakfast for the whole family. The main difference from the usual pancakes is cooking in a dry pan with a non-stick coating, while the pancakes are fried in vegetable oil. <br>To the classic recipe, you can add some products that will create lush and soft pancakes with cocoa and an unusual chocolate aftertaste.</span>
-                                            </div>
+                                        <img class="BreakFast_Lunch_Dinner_food_pict" src="images/food-1247612_640.jpg" alt="">
+                                        <div style="padding: 10px 10px 10px 10px;">
+                                            <span class = 'bld_price'>$ 8.99</span><br>
+                                            <span class = 'bld_nam'>Recipe name</span><br>
+                                            <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                         </div>
-                                        <button class="red_button_small" onclick="swa('br','2');" type="button" title='View dish information'>
+                                        <button class="red_button_small" onclick="swa('br','2');" type="button">
                                             Know More
                                         </button>
                                     </div>
                                     <div id='br3' class="BreakFast_Lunch_Dinner_food">
-                                        <div>
-                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/waffles-1149934_640.jpg" alt="Russian pancakes" title='Russian pancakes'>
-                                            <div style="padding: 10px 10px 10px 10px;">
-                                                <span class = 'bld_price'>$ 14.49</span><br>
-                                                <span class = 'bld_nam'>Russian pancakes</span><br>
-                                                <span class = 'bld_cont'>Kefir&mdash;1 cup (250 ml)<br>
-                                                    Eggs&mdash;1-2 pcs.<br>
-                                                    Wheat flour-1.5 cups (about 240 g)<br>
-                                                    Sugar-2-3 tablespoons<br>
-                                                    Salt-0.5 teaspoons<br>
-                                                    Soda&mdash;0.25 teaspoons<br>
-                                                    Vegetable oil&mdash;for frying
-                                                </span>
-                                                <span class = 'bld_cont' style="display: none;">Very tasty and tender pancakes on kefir. I strongly recommend lush kefir pancakes for breakfast.</span>
-                                            </div>
+                                        <img class="BreakFast_Lunch_Dinner_food_pict" src="images/waffles-1149934_640.jpg" alt="">
+                                        <div style="padding: 10px 10px 10px 10px;">
+                                            <span class = 'bld_price'>$ 14.49</span><br>
+                                            <span class = 'bld_nam'>Recipe name</span><br>
+                                            <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                         </div>
-                                        <button class="red_button_small" onclick="swa('br','3');" type="button" title='View dish information'>
+                                        <button class="red_button_small" onclick="swa('br','3');" type="button">
                                             Know More
                                         </button>
                                     </div>
@@ -322,96 +350,72 @@
                                 <div class="carousel-item">
                                     <div class="BreakFast_Lunch_Dinner_menu">
                                         <div id='br4' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/breakfast-1804457_640.jpg" alt="Avocado pasta sandwiches" title='Avocado pasta sandwiches'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 10.49</span><br>
-                                                    <span class = 'bld_nam'>Avocado pasta sandwiches</span><br>
-                                                    <span class = 'bld_cont'>avocado – 250 g;<br>
-                                                        lemon juice – 10 ml;<br>
-                                                        olive oil – 20 ml;<br>
-                                                        salt and pepper – to taste.</span>
-                                                        <span class = 'bld_cont' style="display: none;">Among vegans and people who just try to adhere to the principles of proper nutrition, avocado paste is extremely popular. In addition, it is ideal for fasting. And in general, anyone can make this dish to please themselves with a delicious treat.</span>
-                                                 </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/breakfast-1804457_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('br','4');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('br','4');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='br5' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/cereals-563796_640.jpg" alt="Muesli" title='Muesli'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 3.99</span><br>
-                                                    <span class = 'bld_nam'>Muesli</span><br>
-                                                    <span class = 'bld_cont'>1 tbsp oatmeal;<br>
-                                                        1 tbsp brown sugar;<br>
-                                                        300 g dates;<br>
-                                                        2 bananas;<br>
-                                                        4 tbsp peanut butter;<br>
-                                                        1/2 tbsp pine nuts;<br>
-                                                        2 tbsp coconut shavings.</span>
-                                                    <span class = 'bld_cont'>Muesli is the most popular product recommended for making a healthy and healthy breakfast. Hearty, light, inexpensive muesli, prepared at home according to one of the many recipes, is a boost of energy for the whole day.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/cereals-563796_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('br','5');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('br','5');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id = 'br6' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pancakes-2020863_640.jpg" alt="Sushi set" title='Sushi set'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 9.99</span><br>
-                                                    <span class = 'bld_nam'>Sushi set</span><br>
-                                                    <span class = 'bld_cont'>Philadelphia light syake, California kappa maki with caviar, Lava with salmon, Sakura, Olivier tempura, Banzai roll, Lava with crab, Tender with chicken, Mr. krabs, Futomaki chicken</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pancakes-2020863_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('br','6');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('br','6');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                      </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="BreakFast_Lunch_Dinner_menu">
-                                        <div id='br7' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/brown-eggs-3217675_640.jpg" alt="Boiled egg" title='Boiled egg'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 0.99</span><br>
-                                                    <span class = 'bld_nam'>Boiled egg</span><br>
-                                                    <span class = 'bld_cont'>Boiled eggs are the simplest breakfast dish. It is enough to cook them to the desired degree of readiness, hard-boiled or "in a bag", and add salt to taste.</span>
-                                                </div>
+                                    <div id='br7' class="BreakFast_Lunch_Dinner_menu">
+                                        <div class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/brown-eggs-3217675_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
                                             <button class="red_button_small" onclick="swa('br','7');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id = 'br8' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/bread-101636_640.jpg" alt="Egg, avocado and tomatoes" title='Egg, avocado and tomatoes'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 8.99</span><br>
-                                                    <span class = 'bld_nam'>Egg, avocado and tomatoes</span><br>
-                                                    <span class = 'bld_cont'>Avocado and eggs are a great combination of taste and health. These products have a lot in common, mostly a similar shape. Both are sensitive to touch and quickly deteriorate. Both go well with many other ingredients, including basil, bacon, zucchini, etc
-                                                        . Both are light, go well with sweet dishes, and make perfect meals to eat at any time of the day.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/bread-101636_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('br','8');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('br','8');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='br9' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/breakfast-456351_640.jpg" alt="Boiled potatoes with dill" title='Boiled potatoes with dill'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 3.49</span><br>
-                                                    <span class = 'bld_nam'>Boiled potatoes with dill</span><br>
-                                                    <span class = 'bld_cont'>Together with a vegetable salad or pickles, boiled potatoes with dill can be served as a separate dish or as a side dish to meat and fish snacks. Despite the simplicity of cooking, it will be the highlight of any festive table.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/breakfast-456351_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('br','9');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('br','9');" type="button">
                                                 Know More
                                             </button>
                                         </div>
@@ -422,8 +426,14 @@
                     </div>
                     <div class='menu_redflag'>
                         <div class="customer_review">
-                            <img src="images/Potoshop/RedFlag.png" alt="Customer review" title="Customer review">
+                            <img src="images/Potoshop/RedFlag.png" alt="">
                         </div>
+                        <!-- <div style="position: absolute; top: 155px;right: 0;">
+                            <img id="BreakFast_r" src="images/Potoshop/strelka_r.png" alt="">
+                        </div>
+                        <div style="position: absolute; top: 195px;right: 0;">
+                            <img id="BreakFast_l" src="images/Potoshop/strelka_l.png" alt="" style="top: 120px;">
+                        </div> -->
                     </div>
                 </div>
                 <div style="width: 100%; height: 60px;"></div>
@@ -433,8 +443,14 @@
                 <div class="BreakFast_Lunch_Dinner_footer">
                     <div class='menu_redflag'>
                         <div class="customer_review">
-                            <img src="images/Potoshop/RedFlag.png" alt="Customer review" title="Customer review">
+                            <img src="images/Potoshop/RedFlag.png" alt="">
                         </div>
+                        <!-- <div style="position: absolute; top: 155px;left: 0;">
+                            <img id="BreakFast_r" src="images/Potoshop/strelka_r.png" alt="">
+                        </div>
+                        <div style="position: absolute; top: 195px;left: 0;">
+                            <img id="BreakFast_l" src="images/Potoshop/strelka_l.png" alt="" style="top: 120px;">
+                        </div> -->
                     </div>
                     <div class="BreakFast_Lunch_Dinner_Text BreakFast_Lunch_Dinner_conteiner">
                         <div class="BreakFast_Lunch_Dinner_right">
@@ -448,57 +464,35 @@
                                 <div class="carousel-item active">
                                     <div class="BreakFast_Lunch_Dinner_menu_right">
                                         <div id='l1' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/meal-918638_640.jpg" alt="Roast pork with vegetables" title='Roast pork with vegetables'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 19.99</span><br>
-                                                    <span class = 'bld_nam'>Roast pork with vegetables</span><br>
-                                                    <span class = 'bld_cont'>There are no special difficulties in cooking pork with vegetables in a frying pan, even if the recipe surprises with an unusual composition of products. The main task is to preserve the juiciness of the meat, to make it soft. And vegetables will perfectly complement or serve as a side dish. Everything is so simple that you can safely let your imagination run wild, experiment with spices and a bouquet of vegetables.
-                                                    </span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/meal-918638_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','1');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','1');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='l2' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tarte-2409958_640.jpg" alt="Fish and seafood pie" title='Fish and seafood pie'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 23.49</span><br>
-                                                    <span class = 'bld_nam'>Fish and seafood pie</span><br>
-                                                    <span class = 'bld_cont'>butter (cold) 150 g<br>
-                                                        flour 260 g<br>
-                                                        egg 1 piece<br>
-                                                        sour cream 1 tbsp<br>
-                                                        salt pinch</span>
-                                                    <span class = 'bld_cont'>Pie as a main dish or as a snack-I do it with various fish-pike, tilapia, pangasius-always delicious! Especially delicious in cold form, very good with a picnic, children eat with pleasure, satisfying and not hard-try it?</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tarte-2409958_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','2');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','2');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='l3' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/soup-918422_640.jpg" alt="Potato soup" title='Potato soup'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 7.49</span><br>
-                                                    <span class = 'bld_nam'>Potato soup</span><br>
-                                                    <span class = 'bld_cont'>Water&mdash;1.5 l<br>
-                                                        Potatoes&mdash;4 pcs.<br>
-                                                        Carrots&mdash;2 pcs.<br>
-                                                        Onion&mdash;1 pc.<br>
-                                                        Celery&mdash;1 pc.<br>
-                                                        Parsnip (optional)&mdash;1 pc.<br>
-                                                        Parsley-0.5 bunch<br>
-                                                        Vegetable oil&mdash;2 tablespoons<br>
-                                                        Yolk&mdash;1 pc.<br>
-                                                        Sour cream-0.5 cups</span>
-                                                    <span class = 'bld_cont'>Potato soup is familiar to us from childhood. Hearty, nutritious-the recipe for potato soup is simple. But you can also make potato soup with imagination.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/soup-918422_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','3');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','3');" type="button">
                                                 Know More
                                             </button>
                                         </div>
@@ -507,55 +501,35 @@
                                 <div class="carousel-item">
                                     <div class="BreakFast_Lunch_Dinner_menu_right">
                                         <div id='l4' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/potato-soup-2152254_640.jpg" alt="Pea soup" title='Pea soup'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 12.49</span><br>
-                                                    <span class = 'bld_nam'>Pea soup</span><br>
-                                                    <span class = 'bld_cont'>Dried crushed peas&mdash;2 cups<br>
-                                                        Beef with a bone&mdash;1 kg<br>
-                                                        Carrots&mdash;2 pcs.<br>
-                                                        Onion&mdash;2 pcs.<br>
-                                                        Ground pepper&mdash;1 pinch<br>
-                                                        Salt&mdash;1 tablespoon<br>
-                                                        Water&mdash;3 liters</span>
-                                                    <span class = 'bld_cont'>Pea soup has an incomparable taste, usually it is prepared from dried peas thick, with the addition of cream, smoked meat and croutons.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/potato-soup-2152254_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','4');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','4');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='l5' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/fish-3483465_640.jpg" alt="Fried crucian carp" title='Fried crucian carp'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 18.99</span><br>
-                                                    <span class = 'bld_nam'>Fried crucian carp</span><br>
-                                                    <span class = 'bld_cont'>Crucian carp&mdash;2 pcs.<br>
-                                                        Salt-1-2 teaspoons<br>
-                                                        Lemon juice&mdash;1 tablespoon<br>
-                                                        Garlic&mdash;2-4 cloves<br>
-                                                        Frying oil&mdash;150-200 ml<br>
-                                                        Oil for filling&mdash;1 tbsp. spoon</span>
-                                                    <span class = 'bld_cont'>Crucians are very tasty fish, but these bones! However, if you cut the back of the fish in a special way, you will get a crispy fried fish, in which there will be almost no bones.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/fish-3483465_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','5');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','5');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='l6' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/meal-918638_640.jpg" alt="Roast pork with vegetables" title='Roast pork with vegetables'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 19.99</span><br>
-                                                    <span class = 'bld_nam'>Roast pork with vegetables</span><br>
-                                                    <span class = 'bld_cont'>There are no special difficulties in cooking pork with vegetables in a frying pan, even if the recipe surprises with an unusual composition of products. The main task is to preserve the juiciness of the meat, to make it soft. And vegetables will perfectly complement or serve as a side dish. Everything is so simple that you can safely let your imagination run wild, experiment with spices and a bouquet of vegetables.
-                                                    </span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/meal-918638_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','6');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','6');" type="button">
                                                 Know More
                                             </button>
                                         </div>
@@ -564,68 +538,35 @@
                                 <div class="carousel-item">
                                     <div class="BreakFast_Lunch_Dinner_menu_right">
                                         <div id='l7' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/salad-2068210_640.jpg" alt="Arugula salad with cheese" title='Arugula salad with cheese'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 4.49</span><br>
-                                                    <span class = 'bld_nam'>Arugula salad with cheese</span><br>
-                                                    <span class = 'bld_cont'>Arugula leaves-80 g;<br>
-                                                        Shrimp&mdash;300 g;<br>
-                                                        Cherry tomatoes-60 g;<br>
-                                                        Parmesan (optional)&mdash;40 g;<br>
-                                                        Pine nuts&mdash;30 g;<br>
-                                                        Olive oil and wine vinegar for dressing&mdash;to taste</span>
-                                                    <span class = 'bld_cont'>The combination of mozzarella, chicken breast, persimmon, walnuts and arugula just fascinated me.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/salad-2068210_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','7');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','7');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='l8' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/beef-20678_640.jpg" alt="Chops with fried potatoes" title='Chops with fried potatoes'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 8.99</span><br>
-                                                    <span class = 'bld_nam'>Chops with fried potatoes</span><br>
-                                                    <span class = 'bld_cont'>Pork – 500 g<br>
-                                                        Eggs – 3 pcs.<br>
-                                                        Vegetable oil – 60 ml<br>
-                                                        Potatoes-500 g<br>
-                                                        Hard cheese – 100 g<br>
-                                                        Salt&mdash;to taste<br>
-                                                        Pepper-to taste<br>
-                                                        Garlic – 2 cloves<br>
-                                                        Onion&mdash;1 pc.</span>
-                                                    <span class = 'bld_cont'>A delicious meat appetizer of pork in a potato crust will be the decoration of any festive table. The main thing is that the meat according to this recipe is prepared very easily and quickly.
-                                                    </span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/beef-20678_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','8');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','8');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='l9' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/chicken-2451482_640.jpg" alt="Сhicken legs" title='Сhicken legs'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 14.49</span><br>
-                                                    <span class = 'bld_nam'>Сhicken legs</span><br>
-                                                    <span class = 'bld_cont'>Chicken drumsticks&mdash;8 pcs.<br>
-                                                        Carrot&mdash;1 pc.<br>
-                                                        Onion&mdash;1 pc.<br>
-                                                        Garlic&mdash;1-2 cloves<br>
-                                                        Sour cream&mdash;250 g<br>
-                                                        Water (boiling water)&mdash;1 cup<br>
-                                                        Sunflower oil for frying&mdash;60 ml<br>
-                                                        Bay leaf&mdash;1 pc.<br>
-                                                        Chicken seasoning&mdash;1 teaspoon<br>
-                                                        Ground black pepper&mdash;to taste<br>
-                                                        Salt&mdash;to taste</span>
-                                                    <span class = 'bld_cont'>Chicken legs-recipes are simple, affordable and very popular. Fried chicken legs in breadcrumbs, chicken legs in a sleeve in the oven or stewed chicken legs with potatoes in a slow cooker are perfect for a quick dinner. And for the holiday, it will be useful to learn how to bake chicken legs in dough, because chicken legs in a puff pastry bag look very appetizing, baked legs in puff pastry will decorate any festive table.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/chicken-2451482_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('l','9');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('l','9');" type="button">
                                                 Know More
                                             </button>
                                         </div>
@@ -635,7 +576,7 @@
                         </div>
                     </div>
                     <div class='BreakFast_Lunch_Dinner_conteiner'>
-                        <img class="Book_table_grey_choose_pict" src="images/mainpage/salad-4269480_1920.jpg" alt="Delicious lunch in the middle of the working day" title='Delicious lunch in the middle of the working day'>
+                        <img class="Book_table_grey_choose_pict" src="images/mainpage/salad-4269480_1920.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -646,7 +587,7 @@
             <div class="BreakFast_Lunch_Dinner_base">
                 <div class="BreakFast_Lunch_Dinner_footer">
                     <div class='BreakFast_Lunch_Dinner_conteiner'>
-                        <img class="Book_table_grey_choose_pict" src="images/mainpage/lamp-802048_1920.jpg" alt="Great food for dinner with friends" title='Great food for dinner with friends'>
+                        <img class="Book_table_grey_choose_pict" src="images/mainpage/lamp-802048_1920.jpg" alt="">
                     </div>
                     <div class="BreakFast_Lunch_Dinner_Text BreakFast_Lunch_Dinner_conteiner">
                         <div class="BreakFast_Lunch_Dinner_left">
@@ -660,82 +601,35 @@
                                 <div class="carousel-item active">
                                     <div class="BreakFast_Lunch_Dinner_menu">
                                         <div id='d1' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pumpkin-soup-2886322_640.jpg" alt="Pumpkin soup" title='Pumpkin soup'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 22.49</span><br>
-                                                    <span class = 'bld_nam'>Pumpkin soup</span><br>
-                                                    <span class = 'bld_cont'>Pumpkin&mdash;700 g<br>
-                                                        Potatoes-2-3 pieces.<br>
-                                                        Carrots-1-2 pcs.<br>
-                                                        Onion&mdash;1 pc.<br>
-                                                        Garlic&mdash;1-2 cloves<br>
-                                                        Cream (20% fat content)&mdash;70 ml<br>
-                                                        Olive oil&mdash;3 tablespoons<br>
-                                                        Salt&mdash;to taste<br>
-                                                        Pumpkin seeds (for serving)&mdash;to taste<br>
-                                                        Water&mdash;350 ml</span>
-                                                    <span class = 'bld_cont'>Pumpkin soup is tender and beautiful, it has a lot of useful carotene. So when autumn comes, we buy a pumpkin, look for a recipe for pumpkin soup, and create an orange mood.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pumpkin-soup-2886322_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','1');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('d','1');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='d2' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/sandwich-434658_640.jpg" alt="Burger" title='Burger'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 8.99</span><br>
-                                                    <span class = 'bld_nam'>Burger</span><br>
-                                                    <span class = 'bld_cont'>Minced meat (mixed (beef + pork))&mdash;600 g<br>
-                                                        Onion&mdash;1 piece<br>
-                                                        Water&mdash;50 ml<br>
-                                                        Coriander-1/2 bunch.<br>
-                                                        Parsley-1/2 bunch.<br>
-                                                        Hops-suneli-1/2 tsp<br>
-                                                        Salt-to taste<br>
-                                                        Black pepper-to taste<br>
-                                                        Garlic&mdash;1 piece</span>
-                                                    <span class = 'bld_cont'>In general, this is a very tasty full-fledged hot dish, and not a snack. I think it is very well suited for children's parties, and just for a delicious dinner.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/sandwich-434658_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','2');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('d','2');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='d3' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tortellini-3137649_640.jpg" alt="Dumplings" title='Dumplings'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 24.49</span><br>
-                                                    <span class = 'bld_nam'>Dumplings</span><br>
-                                                    <span class = 'bld_cont'>Sifted wheat flour-500 g + for working with dough<br>
-                                                        Hot water (70-75 degrees)&mdash;250 ml<br>
-                                                        Egg (small)&mdash;1 pc.<br>
-                                                        Salt&mdash;1 teaspoon without a slide<br>
-                                                        Odorless vegetable oil&mdash;25 ml<br>
-                                                        *
-                                                        For filling:<br>
-                                                        Meat (beef and pork)&mdash;550 g<br>
-                                                        Onion&mdash;200 g<br>
-                                                        Lard (optional, if the meat is lean)&mdash;30 g+<br>
-                                                        Water&mdash;70-80 g (according to the consistency of minced meat)<br>
-                                                        Salt&mdash;1 teaspoon without a slide<br>
-                                                        Ground black pepper&mdash;to taste<br>
-                                                        *
-                                                        For cooking:<br>
-                                                        Bay leaf&mdash;to taste<br>
-                                                        Salt&mdash;to taste<br>
-                                                        Black pepper peas&mdash;to taste<br>
-                                                        Onion&mdash;1/4 pc.<br>
-                                                        *
-                                                        For serving:<br>
-                                                        Butter&mdash;to taste</span>
-                                                    <span class = 'bld_cont'>Pelmeni is a famous dish of Russian cuisine, which has ancient Chinese, Finno-Ugric, Turkic and Slavic roots. The modern name comes from the Udmurt "pelnyan" – "bread ear". Analogues of dumplings exist in many cuisines of the world. The taste, richness and convenience of storage have made the dumplings extremely popular, ready-made dumplings can be bought at any grocery store. But, of course, the most delicious dumplings are homemade. In order to make delicious dumplings, first of all you need a good recipe for dumpling dough, a recipe for minced meat for dumplings and a little skill. Good recipes for homemade dumplings, recipes for dumpling dough, recipes for minced meat for dumplings, as well as answers to questions: how to make dumplings, how to cook dumplings, how much to cook dumplings, how to fry dumplings in a frying pan, how to bake dumplings in the oven, how to cook dumplings in a pot, lazy dumplings, you will find on our website.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tortellini-3137649_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','3');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('d','3');" type="button">
                                                 Know More
                                             </button>
                                         </div>
@@ -744,62 +638,35 @@
                                 <div class="carousel-item">
                                     <div class="BreakFast_Lunch_Dinner_menu">
                                         <div id='d4' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/grilled-chicken-1334632_640.jpg" alt="Grilled chicken breast with vegetables" title='Grilled chicken breast with vegetables'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 10.49</span><br>
-                                                    <span class = 'bld_nam'>Grilled chicken breast with vegetables</span><br>
-                                                    <span class = 'bld_cont'>Chili sauce-1 ½ cups<br>
-                                                        Wine vinegar, red&mdash;½ cup<br>
-                                                        Mustard – 4 ½ tsp<br>
-                                                        Minced garlic-2 cloves<br>
-                                                        Chicken breasts with a bone – 6 pcs. (250 g each)</span>
-                                                    <span class = 'bld_cont'>The minimum amount of ingredients for the marinade, low-fat chicken and ... the mood to grill the meat&mdash;that's all you need for a good dinner.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/grilled-chicken-1334632_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','4');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('d','4');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='d5' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/osso-buco-2535546_640.jpg" alt="Vegetable stew with meat" title='Vegetable stew with meat'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 12.99</span><br>
-                                                    <span class = 'bld_nam'>Vegetable stew with meat</span><br>
-                                                    <span class = 'bld_cont'>Zucchini&mdash;1 pc.<br>
-                                                        Bulgarian pepper&mdash;3 pcs.<br>
-                                                        Hot pepper&mdash;1 pc.<br>
-                                                        Tomatoes&mdash;4 pcs.<br>
-                                                        Carrots&mdash;2 pcs.<br>
-                                                        Onion&mdash;3 pcs.<br>
-                                                        Garlic&mdash;5 cloves<br>
-                                                        Dill<br>
-                                                        Punch<br>
-                                                        Tomato paste&mdash;5 tbsp<br>
-                                                        Vegetable oil<br>
-                                                        Ground coriander<br>
-                                                        Ground black pepper<br>
-                                                        Salt<br>
-                                                        Bay leaf</span>
-                                                    <span class = 'bld_cont'>Vegetable stew with meat is familiar to everyone. To prepare a vegetable stew with meat, you need any meat, onions, carrots and any vegetables. In summer, they make a tender vegetable stew with meat and zucchini. When preparing a vegetable stew recipe with meat in winter, put potatoes, cabbage, canned peppers and tomatoes.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/osso-buco-2535546_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','5');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('d','5');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='d6' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tarte-flambee-3391203_640.jpg" alt="Pizza with red fish" title='Pizza with red fish'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 34.49</span><br>
-                                                    <span class = 'bld_nam'>Pizza with red fish</span><br>
-                                                    <span class = 'bld_cont'>1.5 tbsp wheat flour;<br> 100 g salted salmon;<br> 150 g mozzarella;<br> 2 tsp capers;<br> 1 onion;<br> 4 tbsp olive oil;<br> 100 ml boiled chilled water;<br> 1 tsp baking powder;<br> a few sprigs of dill.</span>
-                                                    <span class = 'bld_cont'>Pizza is an Italian flatbread with vegetable, cheese, mushroom and meat fillings. Its first recipe appeared in Italy in the XVI century. Also, as a filling, you can use red fish, for example, salmon.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tarte-flambee-3391203_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','6');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('d','6');" type="button">
                                                 Know More
                                             </button>
                                         </div>
@@ -808,66 +675,35 @@
                                 <div class="carousel-item">
                                     <div class="BreakFast_Lunch_Dinner_menu">
                                         <div id='d7' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/delicious-1178513_640.jpg" alt="Trout with new potatoes" title='Trout with new potatoes'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 11.99</span><br>
-                                                    <span class = 'bld_nam'>Trout with new potatoes</span><br>
-                                                    <span class = 'bld_cont'>Trout steak 2 pcs<br>
-                                                        Potato 3-4 pieces<br>
-                                                        Cheese 50 g<br>
-                                                        Mayonnaise 2 tbsp<br>
-                                                        Salt to taste<br>
-                                                        Ground black pepper to taste</span>
-                                                    <span class = 'bld_cont'>Trout baked with potatoes in the oven under a cheese chicken, this is a great option for a delicious dinner for two.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/delicious-1178513_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','7');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('d','7');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='d8' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pasta-1330541_640.jpg" alt="Pasta with mushrooms" title='Pasta with mushrooms'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 12.99</span><br>
-                                                    <span class = 'bld_nam'>Pasta with mushrooms</span><br>
-                                                    <span class = 'bld_cont'>Spaghetti&mdash;200 g<br>
-                                                        Mushrooms ( champignons)&mdash;300 g<br>
-                                                        Onion&mdash;150 g<br>
-                                                        Cream 10-15%&mdash;250 ml<br>
-                                                        Salt&mdash;to taste<br>
-                                                        Ground black pepper&mdash;to taste<br>
-                                                        Vegetable oil&mdash;30 ml</span>
-                                                    <span class = 'bld_cont'>In this dish, a delicate and aromatic mushroom sauce with soft creamy notes is perfectly combined with spaghetti. Cooking spaghetti with mushrooms in a creamy sauce will take you very little time, and the result is a delicious and hearty dinner.</span>
-                                                </div>
-                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','8');" type="button" title='View dish information'>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pasta-1330541_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','8');" type="button">
                                                 Know More
                                             </button>
                                         </div>
                                         <div id='d9' class="BreakFast_Lunch_Dinner_food">
-                                            <div>
-                                                <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/lasagna-3344997_640.jpg" alt="Casserole with farfalle, pumpkin and beef" title='Casserole with farfalle, pumpkin and beef'>
-                                                <div style="padding: 10px 10px 10px 10px;">
-                                                    <span class = 'bld_price'>$ 14.49</span><br>
-                                                    <span class = 'bld_nam'>Casserole with farfalle, pumpkin and beef</span><br>
-                                                    <span class = 'bld_cont'>Pumpkin (pulp)&mdash;350 g<br>
-                                                        Chicken fillet-500 g<br>
-                                                        Pasta / Pasta (bows)&mdash;200 g<br>
-                                                        Olive oil-2 tbsp. l<br>
-                                                        . Butter&mdash;30 g<br>
-                                                        Hot red pepper (small pods, to taste)&mdash;2 pcs<br>
-                                                        Soy sauce (to taste)&mdash;2 tbsp<br>
-                                                        Honey (to taste)&mdash;1 tbsp<br>
-                                                        Salt (for cooking pasta)&mdash;to taste<br>
-                                                        Garlic (large)&mdash;2 teeth.<br>
-                                                        Cumin-0.5 tsp<br>
-                                                        Coriander (whole)&mdash;0.5 tsp.</span>
-                                                    <span class = 'bld_cont'>Serve the macaroni grin "ZUCCA" dish in portions.</span>
-                                                </div>
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/lasagna-3344997_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
                                             </div>
-                                            <button class="red_button_small" onclick="swa('d','9');" type="button" title='View dish information'>
+                                            <button class="red_button_small" onclick="swa('d','9');" type="button">
                                                 Know More
                                             </button>
                                         </div>
@@ -878,8 +714,14 @@
                     </div>
                     <div class='menu_redflag'>
                         <div class="customer_review">
-                            <img src="images/Potoshop/RedFlag.png" alt="Customer review" title="Customer review">
+                            <img src="images/Potoshop/RedFlag.png" alt="">
                         </div>
+                        <!-- <div style="position: absolute; top: 155px;right: 0;">
+                            <img id="BreakFast_r" src="images/Potoshop/strelka_r.png" alt="">
+                        </div>
+                        <div style="position: absolute; top: 195px;right: 0;">
+                            <img id="BreakFast_l" src="images/Potoshop/strelka_l.png" alt="" style="top: 120px;">
+                        </div> -->
                     </div>
                 </div>
                 <div style="width: 100%; height: 60px;"></div>
@@ -887,7 +729,7 @@
         </div>
 
         <div class="EverydayEvents">
-            <img src="images/Potoshop/Logo3.png" alt="Our restaurant logo" title='Our restaurant logo' style="margin-bottom: 10px;"><br>
+            <img src="images/Potoshop/Logo3.png" alt="" style="margin-bottom: 10px;"><br>
             <div style="margin-bottom: 20px; text-transform: uppercase;">
                 Everyday Events<br>
                 <span class="EverydayEvents_title">all day food solutions</span>
@@ -895,77 +737,77 @@
             <div class="events_content">
                 <div class="events">
                     <div class="event">
-                        <img class="event_pict" src="images/Gastrofest.jpg" alt="Gastrofest in Minsk" title="Gastrofest in Minsk">
+                        <img class="event_pict" src="images/Gastrofest.jpg" alt="">
                         <div class='event-right'>
                             <div class="event_text">
                                 <div class = 'event_data'>
                                      15/04/2021   
                                 </div>
-                                <div class='event_title'>GASTROFEST. <br> I REPUBLICAN</div>
-                                <p class='event_content'>Gastrofest is a series of gastronomic festivals that will appeal to all connoisseurs of delicious food and high-quality drinks. All festivals have a different theme, but the same mechanics. The top establishments in their segment offer their best sets at a fixed price in a certain period of time. Try, compare, vote!</p>
-                                <p class='event_content'>Tomorrow a new Gastrofest will start in Minsk: it will be held from April 15 to ...</p>
+                                <div class='event_title'>GASTROFEST. <br> I РЕСПУБЛИКАНСКИЙ</div>
+                                <p class='event_content'>Гастрофест — это серия гастрономических фестивалей, которая придется по душе всем ценителям вкусной еды и качественных напитков. У всех фестивалей разная тема, но одна механика. Топовые в своем сегменте заведения предлагают свои лучшие сеты по фиксированной цене в определенный отрезок времени. Пробуй, сравнивай, голосуй!</p>
+                                <p class='event_content'>Завтра в Минске стартует новый Gastrofest: он пройдет с 15 апреля по ...</p>
                             </div>
-                            <button class="event-right_but WhiteBatton event_WhiteBatton">read more</button>
+                            <button class="WhiteBatton event_WhiteBatton">read more</button>
                         </div>
                     </div>
                     <div class="event">
-                        <img class="event_pict" src="images/rebox.jpg" alt="REBOX in Minsk" title="REBOX in Minsk">
+                        <img class="event_pict" src="images/rebox.jpg" alt="">
                         <div class='event-right'>
                             <div class="event_text">
                                 <div class = 'event_data'>
                                         15/04/2021   
                                 </div>
                                 <div class='event_title'>REBOX</div>
-                                <p class='event_content'>A rebox is a set of food products with home delivery and a step-by-step description of how to prepare a dish. Feel like a real chef in a home environment together with Rebox.by.</p>
-                                <p class='event_content'>We bring food packages for a week – for 3 and 5 dinners. Packages with packaged ingredients you ...</p>
+                                <p class='event_content'>Ребокс – это набор продуктов питания с доставкой на дом и пошаговым описанием приготовления блюда. Почувствуйте себя настоящим шеф-поваром в домашней обстановке вместе с Rebox.by.</p>
+                                <p class='event_content'>Мы привозим наборы продуктов на неделю – на 3 и 5 ужинов. Пакеты с фасованными ингредиентами вы ...</p>
                             </div>
-                            <button class="event-right_but WhiteBatton event_WhiteBatton">read more</button>
+                            <button class="WhiteBatton event_WhiteBatton">read more</button>
                         </div>
                     </div>
-                    <div class="event event_hide">
-                        <img class="event_pict" src="images/mainevents/birthday-947438_640.jpg" alt="birthday" title="My daughter's birthday">
+                    <div class="event">
+                        <img class="event_pict" src="images/Gastrofest.jpg" alt="">
                         <div class='event-right'>
                             <div class="event_text">
                                 <div class = 'event_data'>
-                                    02/06/2021   
+                                     15/04/2021   
                                 </div>
-                                <div class='event_title'>My daughter's birthday</div>
-                                <p class='event_content'>Health, happiness, good luck, good friends.</p>
-                                <p class='event_content'></p>
+                                <div class='event_title'>GASTROFEST. <br> I РЕСПУБЛИКАНСКИЙ</div>
+                                <p class='event_content'>Гастрофест — это серия гастрономических фестивалей, которая придется по душе всем ценителям вкусной еды и качественных напитков. У всех фестивалей разная тема, но одна механика. Топовые в своем сегменте заведения предлагают свои лучшие сеты по фиксированной цене в определенный отрезок времени. Пробуй, сравнивай, голосуй!</p>
+                                <p class='event_content'>Завтра в Минске стартует новый Gastrofest: он пройдет с 15 апреля по ...</p>
                             </div>
-                            <button class="event-right_but WhiteBatton event_WhiteBatton">read more</button>
+                            <button class="WhiteBatton event_WhiteBatton">read more</button>
                         </div>
                     </div>
-                    <div class="event event_hide">
-                        <img class="event_pict" src="images/mainevents/beach-1854076_640.jpg" alt="My nephew is getting married" title="My nephew is getting married">
+                    <div class="event">
+                        <img class="event_pict" src="images/rebox.jpg" alt="">
                         <div class='event-right'>
                             <div class="event_text">
                                 <div class = 'event_data'>
-                                    17/07/2021   
+                                        15/04/2021   
                                 </div>
-                                <div class='event_title'>My nephew is getting married</div>
-                                <p class='event_content'>My nephew is going to marry the most wonderful girl in the world with the unusual name of Violetta. It is also noteworthy that on this day 23 years ago, I myself married my husband. I wish the guys to live together and happily just like us :)</p>
-                                <p class='event_content'></p>
+                                <div class='event_title'>REBOX</div>
+                                <p class='event_content'>Ребокс – это набор продуктов питания с доставкой на дом и пошаговым описанием приготовления блюда. Почувствуйте себя настоящим шеф-поваром в домашней обстановке вместе с Rebox.by.</p>
+                                <p class='event_content'>Мы привозим наборы продуктов на неделю – на 3 и 5 ужинов. Пакеты с фасованными ингредиентами вы ...</p>
                             </div>
-                            <button class="event-right_but WhiteBatton event_WhiteBatton">read more</button>
+                            <button class="WhiteBatton event_WhiteBatton">read more</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <button id = 'buttonShowMore' class="WhiteBatton GreyBatton" title='Show more' onclick="showMoreEvents();">
+            <button class="WhiteBatton GreyBatton">
                 Load More
             </button>
         </div>
         <div class="red_stripe">
-            <img src="images/Potoshop/OurExclusiveMenu.png" alt="Our exclusive menu" title="Our exclusive menu">
+            <img src="images/Potoshop/OurExclusiveMenu.png" alt="">
             <p class='our_deslicous_menu'>Experiance our  deslicous menu!</p>
-            <button class="WhiteBatton" url = 'main_menu.html' title='Go to the page with the menu'>view now</button>
+            <button class="WhiteBatton" url = 'main_menu.html'>view now</button>
         </div>
         <div class="chefs">
             <div class="chefs_pict">
-                <img class="chef_1" src="images/Potoshop/Chef21.png" alt="The masters of the extra class prepare for you" title="The masters of the extra class prepare for you">
-                <img class="chef_2" src="images/Potoshop/Chef1.png" alt="The masters of the extra class prepare for you" title="The masters of the extra class prepare for you">
-                <img class="chef_3" src="images/Potoshop/Chef32.png" alt="The masters of the extra class prepare for you" title="The masters of the extra class prepare for you">
+                <img class="chef_1" src="images/Potoshop/Chef21.png" alt="">
+                <img class="chef_2" src="images/Potoshop/Chef1.png" alt="">
+                <img class="chef_3" src="images/Potoshop/Chef32.png" alt="">
             </div>
             <div class="chef_familie">
                 <div class='chef_familie_Meet'>Meet our great</div>
@@ -991,13 +833,13 @@
             </div>
         </div>
         <div class="EverydayEvents">
-            <img src="images/Potoshop/Logo3.png" alt="Our restaurant logo" title='Our restaurant logo' style="margin-bottom: 10px;"><br>
+            <img src="images/Potoshop/Logo3.png" alt="" style="margin-bottom: 10px;"><br>
             <div style="margin-bottom: 20px; text-transform: uppercase;">
                 users reviews<br>
                 <span class="EverydayEvents_title">Our valuable user’s review</span>
             </div>
             <div class='users_reviews'>
-                <img src="images/Potoshop/usersrev.png" alt="Users review" title="Users review">
+                <img src="images/Potoshop/usersrev.png" alt="">
                 <div class='user_content'>
                     <p class='user_name'>Micheles doe</p>
                     <p class='user_beruf'>Profession and address</p>
@@ -1013,7 +855,7 @@
                         <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
                     </div>
                 </div>
-                <img src="images/Potoshop/usersrev.png" alt="Users review" title="Users review">
+                <img src="images/Potoshop/usersrev.png" alt="">
                 <div class='user_content'>
                     <p class='user_name'>Micheles doe</p>
                     <p class='user_beruf'>Profession and address</p>
@@ -1029,7 +871,7 @@
                         <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
                     </div>
                 </div>
-                <img src="images/Potoshop/usersrev.png" alt="Users review" title="Users review">
+                <img src="images/Potoshop/usersrev.png" alt="">
                 <div class='user_content'>
                     <p class='user_name'>Micheles doe</p>
                     <p class='user_beruf'>Profession and address</p>
@@ -1053,21 +895,21 @@
                 <p class="our_deslicous_menu_small">Sign in with our news letter</p>
             </div>
             <div style="display: inline-flex;">
-                <input id = "castomerMail1" type="text" name="castomerMail1" placeholder="Leave your mail, we will get back to you :)" >
-                <button class="sendcustomermail" url= 'main_contact.html' title='Go to the contact page'><i class="fas fa-arrow-right"></i></button>
+                <input id = "castomerMail" type="text" name="castomerMail" placeholder="Leave your mail, we will get back to you :)" >
+                <button class="sendcustomermail" url= 'main_contact.html'><i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
         <div class="EverydayEvents">
-            <img src="images/Potoshop/Logo3.png" alt="Our restaurant logo" title='Our restaurant logo' style="margin-bottom: 10px;"><br>
+            <img src="images/Potoshop/Logo3.png" alt="" style="margin-bottom: 10px;"><br>
             <div style="margin-bottom: 20px; text-transform: uppercase;">
                 contact us<br>
                 <span class="EverydayEvents_title">we are here to listen you</span>
             </div>
             <div class='contact_us lato_13'>
                 <input class='castomerName' id = "castomerName" type="text" name="castomerName" placeholder="Enter your name..." >
-                <input class='castomeremail' id = "castomeremail" type="text" name="castomeremail" placeholder="Enter your e-mail Id" >
-                <textarea class='castomerComment' id = "castomerComment" type="text" name="castomerComment" placeholder="Enter your comments here"></textarea>
-                <div class="submit_my">
+                <input class='castomeremail' id = "castomerName" type="text" name="castomerName" placeholder="Enter your e-mail Id" >
+                <textarea class='castomerComment' id = "castomerName" type="text" name="castomerName" placeholder="Enter your comments here"></textarea>
+                <div class="submit">
                     <button class="red_button">Submit</button>
                     <span class="Submit_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </span>
                 </div>
@@ -1076,7 +918,7 @@
                 <div class="VisitUsToday">
                     <div class="VisitUsToday_footer">
                         <div class='VisitUsToday_conteiner'>
-                            <img class="VisitUsToday_pict" src="images/mainpage/kimchi-3852526_1280.jpg" alt="Come to us and we will prepare the most delicious food for you" title='Come to us and we will prepare the most delicious food for you'>
+                            <img class="VisitUsToday_pict" src="images/bread-1836411_1920.jpg" alt="">
                         </div>
                         <div class="VisitUsToday_Text VisitUsToday_conteiner">
                             <span class="VisitUsToday_Text_Title">Visit Us Today</span>
@@ -1148,51 +990,33 @@
     </content>
     <footer class="footer_base">
         <div class="footer_logo">
-            <a id = "foot" href="#top"><img src="images/Potoshop/Logo_footer.png" alt="Our restaurant logo" title='Our restaurant logo'></a>
+            <a id = "foot" href="#top"><img src="images/Potoshop/Logo_footer.png" alt=""></a>
         </div>
         <div class="footer">
-            <div class='Designed'>Exclusively designed by Olga Miranovich</div>
+            <div class='Designed'>Exclusively designed by  Olga Miranovich</div>
             <ul class="social_network social_network_footer">
-                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank" title='Go to the facebook page'></a></li>
-                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank" title='Go to the twitter page'></a></li>
-                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank" title='Go to the linkedin page'></a></li>
+                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
             </ul>
             <div class="_Year" >2021 Awesome Spices Psd Layout</div>
         </div>
     </footer>
-    <div id="tooltip"></div>
     <script>
         $(document).ready(function(){$('button').on('click', function(){ 
             if ($(this).attr("onClick") === undefined)  {
-                if ($(this).attr('url') === undefined) {
-                    window.location.href ='main404.html';
-                    $(this).toggleClass('tooltip', true);
-                }
-                else {
-                window.location.href = $(this).attr('url');};
-            }
+    	    //window.location.href = $(this).attr('url');
+    	    window.location.href = isNaN($(this).attr('url'))?'main404.html':$(this).attr('url');
+    	    window.location.href = ($(this).attr('url') === undefined)?'main404.html':$(this).attr('url');
+        }
+        })
         });
-
-        $("button").mousemove(function (eventObject) {
-            $data_tooltip = $(this).attr("data-tooltip") === undefined?"The button's action has not yet been described. Go to 404.":$(this).attr("data-tooltip");
-            if ($(this).attr("onClick") === undefined) 
-                if ($(this).attr('url') === undefined) 
-                $("#tooltip").html($data_tooltip)
-                    .css({ 
-                        "top" : eventObject.pageY + 10,
-                        "left" : eventObject.pageX -250
-                    })
-                    .show();
-                }).mouseout(function () {
-                    $("#tooltip").hide()
-                    .html("")
-                    .css({
-                        "top" : 0,
-                        "left" : 0
-                    });
-                    });
-
-        });
+        // $(document).ready(function(){$('a[href^="#"]').click(function(){
+        // var target = $(this).attr('href');
+        // $('html, body').animate({scrollTop: $(target).offset().top}, 1800);
+        //  return false;
+        // })
+    // });
     </script>
 </body>
 </html>

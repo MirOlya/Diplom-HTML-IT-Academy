@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/icon/OM.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="CSS/Fonts.css" type="text/css">
+    <link rel="stylesheet" href="CSS/header.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Book_table.css" type="text/css">
+    <link rel="stylesheet" href="CSS/RedMobile.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Brekfast_lunch_Dinner.css" type="text/css">
+    <link rel="stylesheet" href="CSS/MainPages.css" type="text/css">
+    <link rel="stylesheet" href="CSS/EverydayEvents.css" type="text/css">
+    <link rel="stylesheet" href="CSS/red_stripe.css" type="text/css">
+    <link rel="stylesheet" href="CSS/chefs.css" type="text/css">
+    <link rel="stylesheet" href="CSS/users_reviews.css" type="text/css">
+    <link rel="stylesheet" href="CSS/ContactUs.css" type="text/css">
+    <link rel="stylesheet" href="CSS/VisitUsToday.css" type="text/css">
+    <link rel="stylesheet" href="CSS/WeAreInYouCity.css" type="text/css">
+    <link rel="stylesheet" href="CSS/footer.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Icon.css">
+    <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+    <title>Spices Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+     <!-- Модальное окно для блюд -->
+    <div id="overlay_menu">
+        <div class="popup">
+            <button class="close" title="Close window" onclick="swa2()"></button>
+            <div class="BreakFast_Lunch_Dinner_food_modal">
+                <div><img id = 'BreakFast_Lunch_Dinner_food_pict_modal' class="BreakFast_Lunch_Dinner_food_pict_modal" src="" alt=""></div>
+                <div style="padding: 10px 10px 10px 10px;">
+                    <span id='_1_modal' class = 'bld_price'>$ 12.49</span><br>
+                    <span id='_2_modal' class = 'bld_nam'>Recipe name</span><br>
+                    <span id='_3_modal' class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='JS/firstjs.js'></script>
+    <header class="header">
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a href="main_menu.html">Menu</a></li>
+                <li><a href="main_events.html">News</a></li>
+                <li><a href="main_contact.html">Contact</a></li>
+            </ul>
+        </div>
+          
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <!-- <div class="dropdown">
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <object type="image/svg+xml" data="menu.svg">
+                    <img class='dropdown_icon' src="images/menu.svg" alt="Фолбэк">
+                </object>
+            </label>
+            <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a href="main_menu.html">Menu</a></li>
+                <li><a href="main_events.html">News</a></li>
+                <li><a href="#top">Pages</a></li>
+                <li><a href="main_contact.html">Contact</a></li>
+            </ul>
+        </div> -->
+        <ul class="menu" name="top" id="top">
+            <li class="menu_a"><a href="#top">Home</a></li>
+            <li><a href="main_menu.html">Menu</a></li>
+            <li><a href="main_events.html">News</a></li>
+            <li><a href="main_contact.html">Contact</a></li>
+         </ul>
+         <div class="logo">
+            <a href="#top"><img src="images/Potoshop/Logo_footer2.png" alt=""></a>
+        </div>
+        <ul class="social_network">
+            <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+            <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+            <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
+        </ul>
+    </header>
+    <content class="content">
+        <div class="Main_text_pic">
+            <div class="Text_small_line">
+                <span>Awesome spices-a multi cuisine restaurant theme</span>
+            </div>
+            <div class="Text_big">
+                <h1>It's all about <br> good food</h1>
+            </div>
+            <div class="Text_buity">
+                <span class="Text_buity_normal">Come and</span>
+                <br>
+                <span class="Text_buity_kursiv">Experianse</span>
+                <br>
+                <span class="Text_buity_normal" style='white-space: pre;'>                                   our best of world class cuisine!</span>
+            </div>
+        </div>
+        <div class="Experianse">
+            <div class="Table_Number">
+                <div class="Table_Number_Grey">
+                    <div style='margin-left: 30px;margin-top: 40px; font-size: 20px;'>
+                        our<br><span>delicious<br>food</span><br>at your<br>doorstep
+                    </div>
+                </div>
+                <div class="Table_Number_Red_Left">
+                    <div class='Table_Number_Red_Left_CallUs'>Call us at our 24hr number</div>
+                    <div>
+                        <a href="" class="fas fa-phone-alt"></a> <span class='Table_Number_Red_Left_MyTel'>+375 29 691-00-59</span>
+                    </div>
+                </div>
+                <div class="Table_Number_Red_Center">
+                    <div class='Or'>Or</div>
+                </div>
+                <div class="Table_Number_Red_Right">
+                    <button class="WhiteBatton" url='main_menu.html' type="button">
+                        ORDER NOW
+                    </button>
+                </div>
+            </div>
+            <div class = 'Experianse_all'>
+                <div class="Experianse_text">
+                    <img src="images/Potoshop/Logo2_black.png" alt=""><br>
+                    Experianse the best food<br>
+                    <span>our feature recipes</span>
+                </div>
+                <div class="Experianse_picture">
+                    <!-- <input id="Experianse_picture_small_1l" class = "ch" type="radio" name="answer" value="1" checked><div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel"></div>
+                    <input id="Experianse_picture_small_2l" class = "ch" type="radio" name="answer" value="1"><div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel"></div>
+                    <input id="Experianse_picture_small_3l" class = "ch" type="radio" name="answer" value="1"><div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel"></div> -->
+
+                    <div class="Experianse_picture_small Experianse_picture_small_1l Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_2l Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_3l Experianse_picture_sel"></div>
+                    <div  class="Experianse_picture_big Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_3r Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_2r Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_small Experianse_picture_small_1r Experianse_picture_sel"></div>
+                    <div class="Experianse_picture_green"></div>
+                </div>
+                <div class="Experianse_footer">
+                    <div class="Experianse_footer_red">
+                        Dish and recipe name
+                    </div>
+                    <div class="Experianse_footer_grey">
+                        But I must explain to you how all this mistaken idea of denouncing<br>
+                        pleasure and praising point
+                    </div>
+                    <button class="Experianse_footer_button red_button">
+                        know more
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="Book_table_grey">
+            <div class = "Book_table_grey_title">
+                <img src="images/Potoshop/Logo3.png" alt="" style="margin-bottom: 10px;">
+                <div>
+                    best of dinning experiance<br>
+                    <span>book your's table now</span>
+                </div>
+            </div>
+            <div class="Book_table_grey_choose">
+                <div class="Book_table_grey_choose_footer">
+                    <div class="Book_table_grey_choose_conteiner">
+                        <img class="Book_table_grey_choose_pict" src="images/bread-1836411_1920.jpg" alt="">
+                    </div>
+                    <div class="Book_table_grey_choose_form">
+                        <span>Select your dining space</span>
+                        <div class="Book_table_grey_choose_form_battons">
+                            <!-- <ul style='display: inline-flex; padding-left: 0;'>
+                                <li>
+                                    <div class="Book_table_grey_choose_form_batton person2" style="margin-left: 0px;" >
+                                        <img class='grey' src="images/Potoshop/2Table.png" alt="">
+                                        <img class= 'red' src="images/Potoshop/2TableRed.png" alt="">
+                                        <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                        <div>02<br>person</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="Book_table_grey_choose_form_batton person4">
+                                        <img class='grey' src="images/Potoshop/4Table.png" alt="">
+                                        <img class='red' src="images/Potoshop/4TableRed.png" alt="">
+                                        <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                        04<br>person
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="Book_table_grey_choose_form_batton person8">
+                                        <img class='grey' src="images/Potoshop/8Table.png" alt="">
+                                        <img class= 'red' src="images/Potoshop/8TableRed.png" alt="">
+                                        <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                        08<br>person
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="Book_table_grey_choose_form_batton Banquet" style="margin-right: 0px; ">
+                                        <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                        Book Banquet
+                                    </div>
+                                </li>
+                            </ul> -->
+                            <div class="Book_table_grey_choose_form_batton person2" style="margin-left: 0px;" >
+                                <img class='grey' src="images/Potoshop/2Table.png" alt="">
+                                <img class= 'red' src="images/Potoshop/2TableRed.png" alt="">
+                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                <div>02<br>person</div>
+                            </div>
+                            <div class="Book_table_grey_choose_form_batton person4">
+                                <img class='grey' src="images/Potoshop/4Table.png" alt="">
+                                <img class='red' src="images/Potoshop/4TableRed.png" alt="">
+                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                04<br>person
+                            </div>
+                            <div class="Book_table_grey_choose_form_batton person8">
+                                <img class='grey' src="images/Potoshop/8Table.png" alt="">
+                                <img class= 'red' src="images/Potoshop/8TableRed.png" alt="">
+                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                08<br>person
+                            </div>
+                            <div class="Book_table_grey_choose_form_batton Banquet">
+                                <img class='red selecttable' src="images/Potoshop/SelectTable.png" alt="">
+                                Book Banquet
+                            </div>
+                        </div>
+                        <div style="margin: 15px 15px 15px 0; border-color:#d7d7d7;"><hr></div>
+    
+                        <div class="Book_table_grey_choose_form_inputs">
+                            <label class='in1_l' for="in1"> For your choise</label>
+                            <input class='in1' id = "in1" type="text" name="in1" placeholder="For your choise" >
+                            <label class="s1_l" for="in2">Occasion</label>
+                            <select class='s1' name="Occasion">
+                                <option id = 'in2' value="1" selected>Aniversary</option>
+                            </select>
+                            <label class='s2_l' for="in3">Preferd food </label>
+                            <select class='s2' name="Preferdfood">
+                                <option id='in3' value="1" selected>Italian</option>
+                            </select>
+                        </div>
+    
+                        <div style="margin: 15px 15px 15px 0; border-color:#d7d7d7;"><hr></div>
+    
+                        <div class="Book_table_grey_choose_form_inputs">
+                            <label class='in1_1' for="in1_1"> Enter your name</label>
+                            <input class='in1' type="text" name="in1-1">
+                            <label class="s1_l" for="in2_1">Phone number</label>
+                            <input class="s1" id = "in2_1" type="text" name="in2_1">
+                            <label class="s2_l" for="in3_1">E-mail id</label>
+                            <input class="s2" id = "in3_1" type="text" name="in3_1">
+                        </div>
+                        <div class="BookNow"> 
+                            <div style="color: #eaeaea;">Varify your booking via your mobile phone</div>
+                            <button class="red_button">
+                                book now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="RedMobile">
+            <div class="RedMobile1000">
+                <div class="RedMobile_pict">
+                    <img src="images/Potoshop/Tel.png" alt="" style="margin-bottom: 10px;"><br>
+                </div>
+                <div class="RedMobile_conten">
+                    <div class="RedMobile_conten_big">
+                        Life's become more easier!
+                    </div>
+                    <div class="RedMobile_conten_smal">
+                        Downlaod our mobile app and order from anywhere,<br>and it’s free :)
+                    </div>
+                    <button class="WhiteBatton">
+                        Download Now
+                    </button>
+            </div>
+            </div>
+        </div>
+        
+        <div class="CompleteYoureDay">
+            <img src="images/Potoshop/Logo5White.png" alt="" style="margin-bottom: 10px;"><br>
+            <div style="margin-bottom: 20px; text-transform: uppercase;">
+                Complete Your Day<br>
+                <span>all day food solutions</span>
+            </div>
+            <div class="BreakFast_Lunch_Dinner_base">
+                <div class="BreakFast_Lunch_Dinner_footer">
+                    <div class='BreakFast_Lunch_Dinner_conteiner'>
+                        <img class="Book_table_grey_choose_pict" src="images/mainpage/breakfast-21707_640.jpg" alt="">
+                    </div>
+                    <div class="BreakFast_Lunch_Dinner_Text BreakFast_Lunch_Dinner_conteiner">
+                        <div class="BreakFast_Lunch_Dinner_left">
+                            <div class='Breakfast'>Breakfast</div>
+                            <span>Fresh and healthy breakfast  availbale from 7 am</span>
+                            <div class='Breakfast_hr'><hr></div>
+                            <div class="BreakFast_Lunch_Dinner_Starts">Breakfast starts from</div>
+                        </div>
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">                    
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <div class="BreakFast_Lunch_Dinner_menu">
+                                    <div id='br1' class="BreakFast_Lunch_Dinner_food">
+                                        <img id='br_img_1' class="BreakFast_Lunch_Dinner_food_pict" src="images/orange-cake-398966_640.jpg" alt="">
+                                        <div style="padding: 10px 10px 10px 10px;">
+                                            <span id='br_price_1' class = 'bld_price'>$ 12.49</span><br>
+                                            <span id='br_title_1' class = 'bld_nam'>Recipe name</span><br>
+                                            <span id='br_info_1' class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                        </div>
+                                        <button class="red_button_small" onclick="swa('br','1');" type="button">
+                                            Know More
+                                        </button>
+                                    </div>
+                                    <div id='br2' class="BreakFast_Lunch_Dinner_food">
+                                        <img class="BreakFast_Lunch_Dinner_food_pict" src="images/food-1247612_640.jpg" alt="">
+                                        <div style="padding: 10px 10px 10px 10px;">
+                                            <span class = 'bld_price'>$ 8.99</span><br>
+                                            <span class = 'bld_nam'>Recipe name</span><br>
+                                            <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                        </div>
+                                        <button class="red_button_small" onclick="swa('br','2');" type="button">
+                                            Know More
+                                        </button>
+                                    </div>
+                                    <div id='br3' class="BreakFast_Lunch_Dinner_food">
+                                        <img class="BreakFast_Lunch_Dinner_food_pict" src="images/waffles-1149934_640.jpg" alt="">
+                                        <div style="padding: 10px 10px 10px 10px;">
+                                            <span class = 'bld_price'>$ 14.49</span><br>
+                                            <span class = 'bld_nam'>Recipe name</span><br>
+                                            <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                        </div>
+                                        <button class="red_button_small" onclick="swa('br','3');" type="button">
+                                            Know More
+                                        </button>
+                                    </div>
+                                 </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="BreakFast_Lunch_Dinner_menu">
+                                        <div id='br4' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/breakfast-1804457_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('br','4');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='br5' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/cereals-563796_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('br','5');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id = 'br6' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pancakes-2020863_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('br','6');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                     </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id='br7' class="BreakFast_Lunch_Dinner_menu">
+                                        <div class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/brown-eggs-3217675_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('br','7');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id = 'br8' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/bread-101636_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('br','8');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='br9' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/breakfast-456351_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('br','9');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='menu_redflag'>
+                        <div class="customer_review">
+                            <img src="images/Potoshop/RedFlag.png" alt="">
+                        </div>
+                        <!-- <div style="position: absolute; top: 155px;right: 0;">
+                            <img id="BreakFast_r" src="images/Potoshop/strelka_r.png" alt="">
+                        </div>
+                        <div style="position: absolute; top: 195px;right: 0;">
+                            <img id="BreakFast_l" src="images/Potoshop/strelka_l.png" alt="" style="top: 120px;">
+                        </div> -->
+                    </div>
+                </div>
+                <div style="width: 100%; height: 60px;"></div>
+            </div>
+
+            <div class="BreakFast_Lunch_Dinner_base">
+                <div class="BreakFast_Lunch_Dinner_footer">
+                    <div class='menu_redflag'>
+                        <div class="customer_review">
+                            <img src="images/Potoshop/RedFlag.png" alt="">
+                        </div>
+                        <!-- <div style="position: absolute; top: 155px;left: 0;">
+                            <img id="BreakFast_r" src="images/Potoshop/strelka_r.png" alt="">
+                        </div>
+                        <div style="position: absolute; top: 195px;left: 0;">
+                            <img id="BreakFast_l" src="images/Potoshop/strelka_l.png" alt="" style="top: 120px;">
+                        </div> -->
+                    </div>
+                    <div class="BreakFast_Lunch_Dinner_Text BreakFast_Lunch_Dinner_conteiner">
+                        <div class="BreakFast_Lunch_Dinner_right">
+                            <div class='Breakfast'>Lunch</div>
+                            <div style="text-align: end;">Fresh and healthy lunch  availbale from 12 pm</div>
+                            <div class='Breakfast_hr'><hr></div>
+                            <div class="BreakFast_Lunch_Dinner_Starts">Lunch starts from</div>
+                        </div>
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">                    
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="BreakFast_Lunch_Dinner_menu_right">
+                                        <div id='l1' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/meal-918638_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','1');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='l2' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tarte-2409958_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','2');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='l3' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/soup-918422_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','3');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="BreakFast_Lunch_Dinner_menu_right">
+                                        <div id='l4' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/potato-soup-2152254_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','4');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='l5' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/fish-3483465_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','5');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='l6' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/meal-918638_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','6');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="BreakFast_Lunch_Dinner_menu_right">
+                                        <div id='l7' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/salad-2068210_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','7');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='l8' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/beef-20678_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','8');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='l9' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/chicken-2451482_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('l','9');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='BreakFast_Lunch_Dinner_conteiner'>
+                        <img class="Book_table_grey_choose_pict" src="images/mainpage/salad-4269480_1920.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%; height: 60px;"></div>
+
+
+
+            <div class="BreakFast_Lunch_Dinner_base">
+                <div class="BreakFast_Lunch_Dinner_footer">
+                    <div class='BreakFast_Lunch_Dinner_conteiner'>
+                        <img class="Book_table_grey_choose_pict" src="images/mainpage/lamp-802048_1920.jpg" alt="">
+                    </div>
+                    <div class="BreakFast_Lunch_Dinner_Text BreakFast_Lunch_Dinner_conteiner">
+                        <div class="BreakFast_Lunch_Dinner_left">
+                            <div class='Breakfast'>Dinner</div>
+                            <span>Fresh and healthy dinner availbale from 6 pm</span>
+                            <div class='Breakfast_hr'><hr></div>
+                            <div class="BreakFast_Lunch_Dinner_Starts">Dinner starts from</div>
+                        </div>
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">                    
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="BreakFast_Lunch_Dinner_menu">
+                                        <div id='d1' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pumpkin-soup-2886322_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','1');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='d2' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/sandwich-434658_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','2');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='d3' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tortellini-3137649_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','3');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="BreakFast_Lunch_Dinner_menu">
+                                        <div id='d4' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/grilled-chicken-1334632_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','4');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='d5' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/osso-buco-2535546_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','5');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='d6' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/tarte-flambee-3391203_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','6');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="BreakFast_Lunch_Dinner_menu">
+                                        <div id='d7' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/delicious-1178513_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 12.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','7');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='d8' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/pasta-1330541_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 8.99</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','8');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                        <div id='d9' class="BreakFast_Lunch_Dinner_food">
+                                            <img class="BreakFast_Lunch_Dinner_food_pict" src="images/mainmenu/lasagna-3344997_640.jpg" alt="">
+                                            <div style="padding: 10px 10px 10px 10px;">
+                                                <span class = 'bld_price'>$ 14.49</span><br>
+                                                <span class = 'bld_nam'>Recipe name</span><br>
+                                                <span class = 'bld_cont'>On the other hand, we <br> denounce with righteous</span>
+                                            </div>
+                                            <button class="red_button_small" onclick="swa('d','9');" type="button">
+                                                Know More
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='menu_redflag'>
+                        <div class="customer_review">
+                            <img src="images/Potoshop/RedFlag.png" alt="">
+                        </div>
+                        <!-- <div style="position: absolute; top: 155px;right: 0;">
+                            <img id="BreakFast_r" src="images/Potoshop/strelka_r.png" alt="">
+                        </div>
+                        <div style="position: absolute; top: 195px;right: 0;">
+                            <img id="BreakFast_l" src="images/Potoshop/strelka_l.png" alt="" style="top: 120px;">
+                        </div> -->
+                    </div>
+                </div>
+                <div style="width: 100%; height: 60px;"></div>
+            </div>
+        </div>
+
+        <div class="EverydayEvents">
+            <img src="images/Potoshop/Logo3.png" alt="" style="margin-bottom: 10px;"><br>
+            <div style="margin-bottom: 20px; text-transform: uppercase;">
+                Everyday Events<br>
+                <span class="EverydayEvents_title">all day food solutions</span>
+            </div>
+            <div class="events_content">
+                <div class="events">
+                    <div class="event">
+                        <img class="event_pict" src="images/Gastrofest.jpg" alt="">
+                        <div class='event-right'>
+                            <div class="event_text">
+                                <div class = 'event_data'>
+                                     15/04/2021   
+                                </div>
+                                <div class='event_title'>GASTROFEST. <br> I РЕСПУБЛИКАНСКИЙ</div>
+                                <p class='event_content'>Гастрофест — это серия гастрономических фестивалей, которая придется по душе всем ценителям вкусной еды и качественных напитков. У всех фестивалей разная тема, но одна механика. Топовые в своем сегменте заведения предлагают свои лучшие сеты по фиксированной цене в определенный отрезок времени. Пробуй, сравнивай, голосуй!</p>
+                                <p class='event_content'>Завтра в Минске стартует новый Gastrofest: он пройдет с 15 апреля по ...</p>
+                            </div>
+                            <button class="WhiteBatton event_WhiteBatton">read more</button>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <img class="event_pict" src="images/rebox.jpg" alt="">
+                        <div class='event-right'>
+                            <div class="event_text">
+                                <div class = 'event_data'>
+                                        15/04/2021   
+                                </div>
+                                <div class='event_title'>REBOX</div>
+                                <p class='event_content'>Ребокс – это набор продуктов питания с доставкой на дом и пошаговым описанием приготовления блюда. Почувствуйте себя настоящим шеф-поваром в домашней обстановке вместе с Rebox.by.</p>
+                                <p class='event_content'>Мы привозим наборы продуктов на неделю – на 3 и 5 ужинов. Пакеты с фасованными ингредиентами вы ...</p>
+                            </div>
+                            <button class="WhiteBatton event_WhiteBatton">read more</button>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <img class="event_pict" src="images/Gastrofest.jpg" alt="">
+                        <div class='event-right'>
+                            <div class="event_text">
+                                <div class = 'event_data'>
+                                     15/04/2021   
+                                </div>
+                                <div class='event_title'>GASTROFEST. <br> I РЕСПУБЛИКАНСКИЙ</div>
+                                <p class='event_content'>Гастрофест — это серия гастрономических фестивалей, которая придется по душе всем ценителям вкусной еды и качественных напитков. У всех фестивалей разная тема, но одна механика. Топовые в своем сегменте заведения предлагают свои лучшие сеты по фиксированной цене в определенный отрезок времени. Пробуй, сравнивай, голосуй!</p>
+                                <p class='event_content'>Завтра в Минске стартует новый Gastrofest: он пройдет с 15 апреля по ...</p>
+                            </div>
+                            <button class="WhiteBatton event_WhiteBatton">read more</button>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <img class="event_pict" src="images/rebox.jpg" alt="">
+                        <div class='event-right'>
+                            <div class="event_text">
+                                <div class = 'event_data'>
+                                        15/04/2021   
+                                </div>
+                                <div class='event_title'>REBOX</div>
+                                <p class='event_content'>Ребокс – это набор продуктов питания с доставкой на дом и пошаговым описанием приготовления блюда. Почувствуйте себя настоящим шеф-поваром в домашней обстановке вместе с Rebox.by.</p>
+                                <p class='event_content'>Мы привозим наборы продуктов на неделю – на 3 и 5 ужинов. Пакеты с фасованными ингредиентами вы ...</p>
+                            </div>
+                            <button class="WhiteBatton event_WhiteBatton">read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="WhiteBatton GreyBatton">
+                Load More
+            </button>
+        </div>
+        <div class="red_stripe">
+            <img src="images/Potoshop/OurExclusiveMenu.png" alt="">
+            <p class='our_deslicous_menu'>Experiance our  deslicous menu!</p>
+            <button class="WhiteBatton" url = 'main_menu.html'>view now</button>
+        </div>
+        <div class="chefs">
+            <div class="chefs_pict">
+                <img class="chef_1" src="images/Potoshop/Chef21.png" alt="">
+                <img class="chef_2" src="images/Potoshop/Chef1.png" alt="">
+                <img class="chef_3" src="images/Potoshop/Chef32.png" alt="">
+            </div>
+            <div class="chef_familie">
+                <div class='chef_familie_Meet'>Meet our great</div>
+                <div class='chef_familie_Chefs'>Chefs</div> 
+                <ul>
+                    <li class="chef_list_element">
+                        <span class='chef_list_element_name'>Olga Miranovich</span>
+                        <div class='chef_list_element_descr'>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and </div>
+                    </li>
+                    <li class="chef_list_element">
+                        <span class='chef_list_element_name'>Kanstantsin Miranovich</span>
+                        <p class='chef_list_element_descr'>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and </p>
+                    </li>
+                    <li class="chef_list_element">
+                        <span class='chef_list_element_name'>Ksenia Miranovich</span>
+                        <p class='chef_list_element_descr'>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and </p>
+                    </li>
+                    <li class="chef_list_element">
+                        <span class='chef_list_element_name'>Alena Miranovich</span>
+                        <p class='chef_list_element_descr'>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and </p>
+                    </li>
+                </ul>               
+            </div>
+        </div>
+        <div class="EverydayEvents">
+            <img src="images/Potoshop/Logo3.png" alt="" style="margin-bottom: 10px;"><br>
+            <div style="margin-bottom: 20px; text-transform: uppercase;">
+                users reviews<br>
+                <span class="EverydayEvents_title">Our valuable user’s review</span>
+            </div>
+            <div class='users_reviews'>
+                <img src="images/Potoshop/usersrev.png" alt="">
+                <div class='user_content'>
+                    <p class='user_name'>Micheles doe</p>
+                    <p class='user_beruf'>Profession and address</p>
+                    <p class='user_beruf user_coment'>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, </p>
+                    <div class="user_reiting">
+                        <p>Food Test</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p>Food Quality</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+                        <p>Service</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+                        <p>Price</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+                    </div>
+                </div>
+                <img src="images/Potoshop/usersrev.png" alt="">
+                <div class='user_content'>
+                    <p class='user_name'>Micheles doe</p>
+                    <p class='user_beruf'>Profession and address</p>
+                    <p class='user_beruf user_coment'>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, </p>
+                    <div class="user_reiting">
+                        <p>Food Test</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p>Food Quality</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+                        <p>Service</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+                        <p>Price</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+                    </div>
+                </div>
+                <img src="images/Potoshop/usersrev.png" alt="">
+                <div class='user_content'>
+                    <p class='user_name'>Micheles doe</p>
+                    <p class='user_beruf'>Profession and address</p>
+                    <p class='user_beruf user_coment'>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, </p>
+                    <div class="user_reiting">
+                        <p>Food Test</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p>Food Quality</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+                        <p>Service</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+                        <p>Price</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="update_with_us">
+            <div class='our_deslicous_menu'>
+                <p>Be always updated with us</p>
+                <p class="our_deslicous_menu_small">Sign in with our news letter</p>
+            </div>
+            <div style="display: inline-flex;">
+                <input id = "castomerMail" type="text" name="castomerMail" placeholder="Leave your mail, we will get back to you :)" >
+                <button class="sendcustomermail" url= 'main_contact.html'><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="EverydayEvents">
+            <img src="images/Potoshop/Logo3.png" alt="" style="margin-bottom: 10px;"><br>
+            <div style="margin-bottom: 20px; text-transform: uppercase;">
+                contact us<br>
+                <span class="EverydayEvents_title">we are here to listen you</span>
+            </div>
+            <div class='contact_us lato_13'>
+                <input class='castomerName' id = "castomerName" type="text" name="castomerName" placeholder="Enter your name..." >
+                <input class='castomeremail' id = "castomerName" type="text" name="castomerName" placeholder="Enter your e-mail Id" >
+                <textarea class='castomerComment' id = "castomerName" type="text" name="castomerName" placeholder="Enter your comments here"></textarea>
+                <div class="submit">
+                    <button class="red_button">Submit</button>
+                    <span class="Submit_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </span>
+                </div>
+            </div>
+            <div class="VisitUsToday_base">
+                <div class="VisitUsToday">
+                    <div class="VisitUsToday_footer">
+                        <div class='VisitUsToday_conteiner'>
+                            <img class="VisitUsToday_pict" src="images/bread-1836411_1920.jpg" alt="">
+                        </div>
+                        <div class="VisitUsToday_Text VisitUsToday_conteiner">
+                            <span class="VisitUsToday_Text_Title">Visit Us Today</span>
+                            <p class="VisitUsToday_Text_Context">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="WeAreOpenAt_schedule_conteiner">
+                        <div class="WeAreOpenAt_schedule">
+                            <span class="VisitUsToday_Text_Title VisitUsToday_WeOpen">We are open at</span>
+                            <div class="WeAreOpenAt_schedule_OneDay" style="grid-area: schedule_day1;">
+                                <div class="WeAreOpenAt_schedule_Day">Monday</div>
+                                <div class="WeAreOpenAt_schedule_Time">11 am to 11 pm</div>
+                            </div>
+                            <div class="WeAreOpenAt_schedule_OneDay" style="grid-area: schedule_day2;">
+                                <div class="WeAreOpenAt_schedule_Day">Tuesday</div>
+                                <div class="WeAreOpenAt_schedule_Time">11 am to 11 pm</div>
+                            </div>
+                            <div class="WeAreOpenAt_schedule_OneDay" style="grid-area: schedule_day3;">
+                                <div class="WeAreOpenAt_schedule_Day">Wednessday</div>
+                                <div class="WeAreOpenAt_schedule_Time">11 am to 11 pm</div>
+                            </div>
+                            <div class="WeAreOpenAt_schedule_OneDay" style="grid-area: schedule_day4;">
+                                <div class="WeAreOpenAt_schedule_Day">Thursday</div>
+                                <div class="WeAreOpenAt_schedule_Time">11 am to 11 pm</div>
+                            </div>
+                            <div class="WeAreOpenAt_schedule_OneDay" style="grid-area: schedule_day5;">
+                                <div class="WeAreOpenAt_schedule_Day">Friday</div>
+                                <div class="WeAreOpenAt_schedule_Time">11 am to 11 pm</div>
+                            </div>
+                            <div class="WeAreOpenAt_schedule_OneDay" style="grid-area: schedule_day6;">
+                                <div class="WeAreOpenAt_schedule_Day">Saturday</div>
+                                <div class="WeAreOpenAt_schedule_Time">11 am to 12 pm</div>
+                            </div>
+                            <div class="WeAreOpenAt_schedule_OneDay" style="grid-area: schedule_day7;">
+                                <div class="WeAreOpenAt_schedule_Day">Sunday</div>
+                                <div class="WeAreOpenAt_schedule_Time">11 am to 12 pm</div>
+                            </div>
+                            <span class="WeAreOpenAt_schedule_Futer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua. Ut enim ad minim </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="WeAreInYouCity">
+                <div class="Table_Number">
+                    <div class="WeAreInYouCity_Text">
+                        <div>
+                            we are<br><span>at your city
+                        </div>
+                    </div>
+                    <div class="Table_Number_Red_Right" style="flex-basis: 613px;">
+                        <div class='WeAreInYouCity_inputs lato_13'>
+                            <input class='WeAreInYouCity_input WeAreInYouCity_input_city' id = "yourcity" type="text" name="yourcity" placeholder="Enter your city name..." >
+                            <input class='WeAreInYouCity_input WeAreInYouCity_input_code' id = "yourpincode" type="text" name="yourpincode" placeholder="Enter your pin code" >
+                            <button class="WhiteBatton WeAreInYouCity_batton">
+                                find Now
+                            </button>
+                        </div>
+                    </div>
+                 </div>
+                <section class="map">
+                    <div class="container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.07364075986!2d27.439919915250705!3d53.894895041182544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbdadba0301f61%3A0x6ead263c4a72acf3!2z0YPQuy4g0K_QutGD0LHQvtCy0YHQutC-0LPQviA3OCwg0JzRltC90YHQug!5e0!3m2!1sru!2sby!4v1619886301024!5m2!1sru!2sby" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </content>
+    <footer class="footer_base">
+        <div class="footer_logo">
+            <a id = "foot" href="#top"><img src="images/Potoshop/Logo_footer.png" alt=""></a>
+        </div>
+        <div class="footer">
+            <div class='Designed'>Exclusively designed by  Olga Miranovich</div>
+            <ul class="social_network social_network_footer">
+                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
+            </ul>
+            <div class="_Year" >2021 Awesome Spices Psd Layout</div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function(){$('button').on('click', function(){ 
+            if ($(this).attr("onClick") === undefined)  {
+    	    //window.location.href = $(this).attr('url');
+    	    window.location.href = isNaN($(this).attr('url'))?'main404.html':$(this).attr('url');
+    	    window.location.href = ($(this).attr('url') === undefined)?'main404.html':$(this).attr('url');
+        }
+        })
+        });
+        // $(document).ready(function(){$('a[href^="#"]').click(function(){
+        // var target = $(this).attr('href');
+        // $('html, body').animate({scrollTop: $(target).offset().top}, 1800);
+        //  return false;
+        // })
+    // });
+    </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/icon/OM.ico">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="CSS/Fonts.css" type="text/css">
+    <link rel="stylesheet" href="CSS/header.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Book_table.css" type="text/css">
+    <link rel="stylesheet" href="CSS/RedMobile.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Brekfast_lunch_Dinner.css" type="text/css">
+    <link rel="stylesheet" href="CSS/MainPages.css" type="text/css">
+    <link rel="stylesheet" href="CSS/EverydayEvents.css" type="text/css">
+    <link rel="stylesheet" href="CSS/red_stripe.css" type="text/css">
+    <link rel="stylesheet" href="CSS/chefs.css" type="text/css">
+    <link rel="stylesheet" href="CSS/users_reviews.css" type="text/css">
+    <link rel="stylesheet" href="CSS/ContactUs.css" type="text/css">
+    <link rel="stylesheet" href="CSS/VisitUsToday.css" type="text/css">
+    <link rel="stylesheet" href="CSS/WeAreInYouCity.css" type="text/css">
+    <link rel="stylesheet" href="CSS/footer.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Icon.css">
+    <!-- <link rel="stylesheet" href="CSS/Menu.css"> -->
+    <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+    <title>Spices Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        function swa(fTag,numTag){
+            var b = document.getElementById('overlay_menu');
+            b.style.visibility = 'visible';
+            b.style.opacity = '1';
+            b.style.transition = 'all 0.7s ease-out 0s';
+
+
+            let parent = document.querySelector('#'+fTag+''+numTag);
+            let children = parent.childNodes;
+            var ch = 0;
+
+            for (let i of children) {
+                if (i.tagName === 'DIV') {
+                    let children1 = i.childNodes;
+                    for (let i1 of children1) {
+                        if (i1.tagName === 'SPAN') {
+                            document.getElementById('_'+(++ch)+'_modal').textContent = i1.textContent;
+                        }
+                    }
+                }
+                else if (i.tagName === 'IMG') {
+                    var imgMenu = document.getElementById('BreakFast_Lunch_Dinner_food_pict_modal');
+                    imgMenu.src = i.src;
+                }
+            }
+
+        }
+        function swa2(){
+            var b = document.getElementById('overlay_menu');
+            b.style.visibility = 'hidden';
+            b.style.opacity = '0';
+        }
+        $('button').on('click', function(){ 
+    	    window.location.href = $(this).attr('url');
+        });
+        function oops(){
+            window.location.href = 'main404.html';
+        }
+    </script>
+     <!-- Модальное окно для блюд -->
+    <div id="overlay_menu">
+        <div class="popup">
+            <button class="close" title="Close window" onclick="swa2()"></button>
+            <div class="BreakFast_Lunch_Dinner_food_modal">
+                <div><img id = 'BreakFast_Lunch_Dinner_food_pict_modal' class="BreakFast_Lunch_Dinner_food_pict_modal" src="" alt=""></div>
+                <div style="padding: 10px 10px 10px 10px;">
+                    <span id='_1_modal' style="font-size: 25px;color:#db4f44;">$ 12.49</span><br>
+                    <span id='_2_modal' style="font-size: 13px;color:#888888;">Recipe name</span><br>
+                    <span id='_3_modal' style="font-size: 10px;color:#888888;">On the other hand, we <br> denounce with righteous</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="dropdown">
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <object type="image/svg+xml" data="menu.svg">
+                    <img class='dropdown_icon' src="images/menu.svg" alt="Фолбэк">
+                </object>
+            </label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="main_menu.html">Menu</a></li>
+                <li><a href="main_events.html">News</a></li>
+                <!--<li><a href="#">Pages</a></li>-->
+                <li><a href="main_contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="firstclass">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="main_menu.html">Menu</a></li>
+                <li><a href="main_events.html">News</a></li>
+                <!--<li><a href="#">Pages</a></li>-->
+                <li><a href="main_contact.html">Contact</a></li>
+             </ul>
+             <div class="logo">
+                <a href="index.html"><img src="images/Potoshop/Logo_footer2.png" alt=""></a>
+            </div>
+            <ul class="social_network">
+                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
+            </ul>
+        </div>
+    </header>
+    <content class="content">
+        <div class="Main_text_pic">
+            <div class="Text_small_line">
+                <span>Awesome spices-a multi cuisine restaurant theme</span>
+            </div>
+            <div class="Text_big">
+                <h1>It's all about <br> good food</h1>
+            </div>
+            <div class="Text_buity">
+                <span class="Text_buity_normal">Come and</span>
+                <br>
+                <span class="Text_buity_kursiv">Experianse</span>
+                <br>
+                <span class="Text_buity_normal" style='white-space: pre;'>                                   our best of world class cuisine!</span>
+            </div>
+        </div>
+            <div class="WeAreInYouCity">
+                <div class="Table_Number">
+                    <div class="WeAreInYouCity_Text">
+                        <div>
+                            we are<br><span>at your city
+                        </div>
+                    </div>
+                    <div class="Table_Number_Red_Right" style="flex-basis: 613px;">
+                        <div class='WeAreInYouCity_inputs lato_13'>
+                            <input class='WeAreInYouCity_input WeAreInYouCity_input_city' id = "yourcity" type="text" name="yourcity" placeholder="Enter your city name..." >
+                            <input class='WeAreInYouCity_input WeAreInYouCity_input_code' id = "yourpincode" type="text" name="yourpincode" placeholder="Enter your pin code" >
+                            <button class="WhiteBatton WeAreInYouCity_batton">
+                                find Now
+                            </button>
+                        </div>
+                    </div>
+                 </div>
+                <section class="map">
+                    <div class="container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.07364075986!2d27.439919915250705!3d53.894895041182544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbdadba0301f61%3A0x6ead263c4a72acf3!2z0YPQuy4g0K_QutGD0LHQvtCy0YHQutC-0LPQviA3OCwg0JzRltC90YHQug!5e0!3m2!1sru!2sby!4v1619886301024!5m2!1sru!2sby" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </content>
+    <footer class="footer_base">
+        <div class="footer_logo">
+            <a href="index.html"><img src="images/Potoshop/Logo_footer.png" alt=""></a>
+        </div>
+        <div class="footer">
+            <div class='Designed'>Exclusively designed by  Olga Miranovich</div>
+            <ul class="social_network social_network_footer">
+                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
+            </ul>
+            <div class="_Year" >2021 Awesome Spices Psd Layout</div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+    <script>
+        $('button').on('click', function(){ 
+        window.location.href = $(this).attr('url');
+        });
+    </script>
+</body>
+</html>

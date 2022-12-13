@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Spices</title>
+</head>
+<style>
+    .menu{
+        width: 100%;
+        border-bottom: solid 1px grey;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Alice', serif;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .menu_left{float: left;}
+    .menu_right{float: right;}
+    .menu li{display: flexbox;border: solid 1px green;padding: 33px 10px 33px 10px; margin: 0 0 0 0;}/*padding: 33px 10px 33px 10px; margin: 0 0 0 0;*/
+    .menu li:hover{border-bottom: solid 1px red; font-weight: bold;}
+    .menu img{height: 87px; width: 87px;}
+    .menu ul{padding: 0 0 0 0;}
+    div.menu_left{border: solid 1px red; width: calc((100%-87px)/2);}
+    div.menu_right{border: solid 1px red; width: calc((100%-87px)/2);}
+</style>
+<body>
+    <div class="menu">
+        <div class="menu_left">
+            <ul>
+                <li>Home</li>
+                <li>Menu</li>
+                <li>News</li>
+                <li>Pages</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="menu_right">
+            <ul>
+                <li>Home</li>
+                <li>Menu</li>
+                <li>News</li>
+                <li>Pages</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div><img src="images/ball.jpeg" alt="Don't find"></div>
+        <div style="clear: both;"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/icon/OM.ico">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="CSS/MainPages.css" type="text/css">
+    <link rel="stylesheet" href="CSS/header.css" type="text/css">
+    <link rel="stylesheet" href="CSS/footer.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Icon.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Fonts.css" type="text/css">
+    <link rel="stylesheet" href="CSS/WeAreInYouCity.css" type="text/css">
+    <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+    <title>Spices Events. Exclusively designed by Olga Miranovich.</title>
+</head>
+<body>
+    <script src='JS/firstjs.js'></script>
+    <header class="header">
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" title = 'Close wimdow' class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="index.html" title='Go to the main page'>Home</a></li>
+                <li><a href="main_menu.html" title='Go to the menu page'>Menu</a></li>
+                <li><a href="main_events.html" title='Go to the news page'>News</a></li>
+                <li><a href="main_contact.html" title='Go to the contact page'>Contact</a></li>
+            </ul>
+        </div>
+          
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <ul class="menu" name="top" id="top">
+            <li><a href="index.html" title='Go to the main page'>Home</a></li>
+            <li><a href="main_menu.html" title='Go to the menu page'>Menu</a></li>
+            <li><a href="main_events.html" title='Go to the news page'>News</a></li>
+            <li><a href="main_contact.html" title='Go to the contact page'>Contact</a></li>
+        </ul>
+         <div class="logo">
+            <a href="index.html" title='Go to the main page'><img src="images/Potoshop/Logo_footer2.png" alt="Go to the main page" title='Go to the main page'></a>
+        </div>
+        <ul class="social_network">
+            <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank" title='Go to the facebook page'></a></li>
+            <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank" title='Go to the twitter page'></a></li>
+            <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank" title='Go to the linkedin page'></a></li>
+        </ul>
+    </header>
+    <content class="content">
+        <img class="main404" src='images/Potoshop/404_4.png' alt="">
+    </content>
+    <!-- <footer class="footer_base">
+        <div class="footer_logo">
+            <a href="index.html"><img src="images/Potoshop/Logo_footer.png" alt=""></a>
+        </div>
+        <div class="footer">
+            <div class='Designed'>Exclusively designed by  Olga Miranovich</div>
+            <ul class="social_network social_network_footer">
+                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank"></a></li>
+                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank"></a></li>
+            </ul>
+            <div class="_Year" >2021 Awesome Spices Psd Layout</div>
+        </div>
+    </footer> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){$('button').on('click', function(){ 
+            if ($(this).attr("onClick") === undefined) {
+    	    //window.location.href = $(this).attr('url');
+    	    window.location.href = isNaN($(this).attr('url'))?'main404.html':$(this).attr('url');
+        }
+        })
+        });
+        $('a[href^="#"]').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+        return false;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/icon/OM.ico">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="CSS/MainPages.css" type="text/css">
+    <link rel="stylesheet" href="CSS/header.css" type="text/css">
+    <link rel="stylesheet" href="CSS/mainmenu.css" type="text/css">
+    <link rel="stylesheet" href="CSS/WeAreInYouCity.css" type="text/css">
+    <link rel="stylesheet" href="CSS/footer.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Icon.css" type="text/css">
+    <link rel="stylesheet" href="CSS/Fonts.css" type="text/css">
+    <link rel="stylesheet" href="CSS/users_reviews.css" type="text/css">
+    <link rel="stylesheet" href="CSS/orders.css" type="text/css">
+    <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap-5.0.0-beta3-dist/css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+    <title>Spices Menu. Exclusively designed by Olga Miranovich.</title>
+    <script src='JS/firstjs.js'></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+     <!-- Модальное окно для заказа -->
+     <div id="overlay_order">
+        <div class="popup_order">
+            <button class="close_order" title="Close window" onclick="swa2_orders(false)"></button>
+            <div class="BreakFast_Lunch_Dinner_food_modal">
+                <div class="orders_page">
+                    <H3 class = "Roboto_30 orders_page_title_big">Order Page</H3>
+                    <div class = 'idorder'>
+                        <p class = 'Lato_15' style='text-transform: none;'>Your order Id is <span class="LatoBold_15" id='numberOrder'>AQ19873562KP</span></p>
+                        <p class = 'lato_13' id="timeOrder"></p>
+                        <script>
+                            var Data = new Date();
+                            var Year = Data.getFullYear();
+                            var Month = ((Data.getMonth()+1)<10)?"0"+(Data.getMonth()+1):(Data.getMonth()+1);
+                            var Day = Data.getDate();
+                            var Hour = Data.getHours();
+                            var dayofWeek = Data.getDay();
+                            document.getElementById('timeOrder').innerHTML=""+dayOfWeekTXT()+", "+Day+" "+MonthOfYear()+" "+Year
+                        </script>
+                    </div>
+                </div>
+                <div class="orders_page">
+                    <H6 class = "lato_13">Your selected items are listed bellow</H6>
+                </div>
+                <div class = "orders_container" id="orders_container">
+                    <div class="selectableMenu" id = "selectableMenu">
+                        <img id = "selectableMenu_img" class="selectableMenu_img" src="images/mainmenu/breakfast-456351_640.jpg" alt="Selected dish" title='Selected dish'>
+                        <div id = "selectableMenu_ingreediance1" class="selectableMenu_ingreediance">
+                            <p class="Lato_15 selectableMenu_name">Recipe Name goes here</p>
+                            <p class="lato_13 selectableMenu_ingreediance1">. ingreediance</p>
+                        </div>
+                        <div id = 'selectableMenu_persons' class = 'selectableMenu_persons Latolight_35'>
+                            <label class="visually-hidden" for="specificSizeSelect1">Preference</label>
+                            <select class="form-select lato_12" id="specificSizeSelect1" onchange="addPerson(this,$(this).prop('id'));">
+                                <option value=1 selected >For 1 person</option>
+                                <option value=2 >For 2 person</option>
+                                <option value=3 >For 3 person</option>
+                                <option value=4 >For 4 person</option>
+                            </select>
+                        </div>
+                        <hr class = 'selectableMenu_HR'>
+                        <span class="selectableMenu_price Latolight_35">15$</span>
+                        <div class = 'selectableMenu_buttoms'>
+                            <input type="checkbox" id="btncheck_order" class = 'greenbtn_order' autocomplete="off" onclick='delSelectableMenu($(this).prop("id"))');>
+                            <label id="greenbtn_for_btn1" class="greenbtn btn" for="btncheck_order">replace</label>
+                        </div>
+                    </div>
+                </div>
+                <hr style='margin: 30px auto;'>
+                <div class = 'totalordervalue'>
+                    <div>
+                        <div class="totalordervalue_text">
+                            <p class="lato_20">Your Total order value is</p>
+                            <p class="lato_13">After added all tax</p>
+                        </div>
+                        <div class="totalordervalue_discount">
+                            <label for="totalordervalue_discount" class="lato_13">Use discount promo code</label>
+                            <input type="text" name='totalordervalue_discount' class="lato_12">
+                        </div>
+                    </div>
+                    <div class = 'totalsum'>
+                        <p class="lato_40" id='totalsum'>$40.48</p>
+                    </div>
+                </div>
+                <hr style='margin: 30px auto;'>
+                <h3 class="Roboto_30">Your info and address</h3>
+                <div class="order_form_inputs">
+                    <input class='in1' type="text" name="in1-1" placeholder ='Enter your name' alt='Enter your name'>
+                    <input class="in2" id = "in2_1" type="text" name="in2_1" placeholder ='E-mail id' alt='E-mail id'>
+                    <input class="in3" id = "in3_1" type="text" name="in3_1" placeholder ='Write your full address' alt='Write your full address'>
+                    <input class="in4" id = "in4_1" type="text" name="in4_1" placeholder ='Pin code' alt='Pin code'>
+                    <input class="in5" id = "in5_1" type="text" name="in5_1" placeholder ='Phone number' alt='Phone number'>
+                </div>
+                <hr style='margin: 30px auto;'>
+                <div class="confirm_and_order">
+                    <input type="checkbox" name='confirm'>
+                    <label class="lato_13" for="confirm">Confirm and proceed</label>
+                    <button class="green_btn_order" onclick="swa2_orders(true)" title='Make an order'>order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" title = 'Close wimdow' class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="index.html" title='Go to the main page'>Home</a></li>
+                <li><a href="#top" title='Go to the menu page'>Menu</a></li>
+                <li><a href="main_events.html" title='Go to the news page'>News</a></li>
+                <li><a href="main_contact.html" title='Go to the contact page'>Contact</a></li>
+            </ul>
+        </div>
+          
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <ul class="menu" name="top" id="top">
+            <li><a href="index.html" title='Go to the main page'>Home</a></li>
+            <li><a href="#top" title='Go to the menu page'>Menu</a></li>
+            <li><a href="main_events.html" title='Go to the news page'>News</a></li>
+            <li><a href="main_contact.html" title='Go to the contact page'>Contact</a></li>
+        </ul>
+         <div class="logo">
+            <a href="index.html" title='Go to the main page'><img src="images/Potoshop/Logo_footer2.png" alt="Go to the main page" title='Go to the main page'></a>
+        </div>
+        <ul class="social_network">
+            <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank" title='Go to the facebook page'></a></li>
+            <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank" title='Go to the twitter page'></a></li>
+            <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank" title='Go to the linkedin page'></a></li>
+        </ul>
+    </header>
+    <content class="content">
+        <div class="mainmenu_header_pict"></div>
+
+        <div class="Main_text_pic mainmenu_main_text_pic">
+            <div class="Text_small_line mainmenu_Text_small_line">
+                <span>Awesome spices-a multi cuisine restaurant theme</span>
+            </div>
+            <div class="Text_big mainmenu_Text_big">
+                <h1>It's all about <br> good food</h1>
+            </div>
+        </div>
+
+        <div class="main_menu_content">
+            
+            <div class="main_menu_select_your_food">
+                <div class = "main_menu_select_your_food_title_big">
+                    <H5 class = "Roboto_30">Select your food</H5>
+                    <p class="lato_13">A special way to select your food from our wide range of recipe</p>
+                </div>
+                <button title='Go to the order page' class="red_button main_menu_select_your_food_button" type="button" onclick="swa_orders();">
+                    ORDER NOW
+                </button>
+
+                <div class="col-sm-12">
+                    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                    <select class="lato_13 form-select" id="specificSizeSelect1">
+                        <option value="1" selected >No-Vegetarian</option>
+                        <option value="2" >Vegetarian</option>
+                    </select>
+                </div>
+                <div class="col-sm-12">
+                    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                    <select class="form-select lato_13" id="specificSizeSelect2">
+                        <option value="1" selected >Rusian dish</option>
+                        <option value="2" >Itialian dish</option>
+                    </select>
+                </div>
+                <div class="col-sm-12">
+                    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                    <select class="form-select lato_13" id="specificSizeSelect3">
+                        <option value="1" >More Spicy</option>
+                        <option value="2" >Less Spicy</option>
+                        <option value="3" selected >Normal Spicy</option>
+                    </select>
+                </div>
+                <div class="col-sm-12">
+                    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                    <select class="form-select lato_13" id="specificSizeSelect4">
+                        <option value="1" selected >Add-ons</option>
+                        <option value="2" >Add-ketchup</option>
+                        <option value="3" >nothing</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="main_menu_time_of_day">
+                <!-- /*Breakfast*/ -->
+                <div class="main_menu_select_your_food_time">
+                    <img class = "logo_50" src="images/Potoshop/Logo2.png"  alt="Our restaurant logo" title='Our restaurant logo'>
+                    <div class="lato_25 main_menu_select_your_food_time_t">Breakfast</div>
+                    <div class = "lato_13 main_menu_select_your_food_result_t">Your search results listed bellow</div>
+                </div>
+
+                <div id="carouselExampleDark" class="carousel carousel-dark" data-bs-ride="carousel">                    
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/orange-cake-398966_640.jpg" id='img_br1' class="card-img-top" alt="Orange cake" title='Orange cake'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_br1'>Orange cake</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_br1'>Calories: 244.5 kcal.<br>
+                                        Protein: 18 g.<br>
+                                        Carbohydrates: 29.8 g.</p>
+                                    <input id='ch1' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId1" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId1Label' for="ch1" class='lato_40'>...</label>
+                                    <div id='myDivId1' class="ShowOrHide">
+                                        <p class="lato_13 _darkgrey">Orange&mdash;1 pc<br>
+                                            Butter&mdash;150 g<br>
+                                            Sugar&mdash;150 g<br>
+                                            Eggs&mdash;2 pcs.<br>
+                                            Vanilla&mdash;a pinch<br>
+                                            Cinnamon-pinch<br>
+                                            Flour&mdash;210 g<br>
+                                            Soda&mdash;0.5 tsp</p>
+                                        <p class="card-text lato_13">A fragrant, tender, lush orange pie that beckons to pour the seagulls.</p>
+                                    </div>
+                                       
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check" id="btncheck_br1" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_br1" title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btnbr1" class="greenbtn btn btn-outline-primary" for="btncheck_br1" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br1" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_br1'>$5.99</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/food-1247612_640.jpg"  id='img_br2' class="card-img-top" alt="Chocolate pancakes" title='Chocolate pancakes'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_br2'>Chocolate pancakes</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_br2'>Calories: 225.5 kcal.<br>
+                                            Protein: 8 g.<br>
+                                            Fats: 8.5 gr.<br>
+                                            Carbohydrates: 29.8 g.</p>
+                                        <input id='ch2' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId2" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId2Label' for="ch2" class='lato_40'>...</label>
+                                        <div id='myDivId2' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">250 g flour;
+                                                300 ml of milk;,<br>
+                                                2 eggs;,<br>
+                                                2 tbsp cocoa powder;<br>
+                                                1 tsp baking powder;<br>
+                                                4 tbsp granulated sugar;<br>
+                                                ½ tsp salt and vanilla;<br>
+                                                1 tbsp vegetable oil.</p>
+                                            <p class="card-text lato_13">Chocolate pancakes are prepared very quickly and with a small amount of available ingredients, so they will be a wonderful breakfast for the whole family. The main difference from the usual pancakes is cooking in a dry pan with a non-stick coating, while the pancakes are fried in vegetable oil. <br>To the classic recipe, you can add some products that will create lush and soft pancakes with cocoa and an unusual chocolate aftertaste.</p>
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_br2" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_br2"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnbr2" class="greenbtn btn btn-outline-primary" for="btncheck_br2" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br2" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_br2'>$8.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/waffles-1149934_640.jpg"  id='img_br3' class="card-img-top" alt="Russian pancakes" title='Russian pancakes'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_br3'>Russian pancakes</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_br3'>Calories: 193.2 kcal.<br>
+                                            Protein: 5 g.<br>
+                                            Fats: 4.9 gr.<br>
+                                            Carbohydrates: 32.6 g.</p>
+
+                                        <input id='ch3' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId3" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId3Label' for="ch3" class='lato_40'>...</label>
+                                        <div id='myDivId3' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">Kefir&mdash;1 cup (250 ml)<br>
+                                                Eggs&mdash;1-2 pcs.<br>
+                                                Wheat flour-1.5 cups (about 240 g)<br>
+                                                Sugar-2-3 tablespoons<br>
+                                                Salt-0.5 teaspoons<br>
+                                                Soda&mdash;0.25 teaspoons<br>
+                                                Vegetable oil&mdash;for frying</p>
+                                            <p class="card-text lato_13">Very tasty and tender pancakes on kefir. I strongly recommend lush kefir pancakes for breakfast.</p>
+                                        </div>
+
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_br3" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_br3"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnbr3" class="greenbtn btn btn-outline-primary" for="btncheck_br3" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br3" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_br3'>$14.49</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/breakfast-1804457_640.jpg"  id='img_br4' class="card-img-top" alt="Avocado pasta sandwiches" title='Avocado pasta sandwiches'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_br4'>Avocado pasta sandwiches</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_br4'>Calories: 182 kcal.<br>
+                                        Squirrels: 3.9 gr.<br>
+                                        Fat: 11 g.<br>
+                                        Carbohydrates: 17.6 g.</p>
+
+                                    <input id='ch4' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId4" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId4Label' for="ch4" class='lato_40'>...</label>
+                                    <div id='myDivId4' class="ShowOrHide">
+                                        <p class="lato_13 _darkgrey">avocado&mdash;250 g;<br>
+                                            lemon juice&mdash;10 ml;<br>
+                                            olive oil&mdash;20 ml;<br>
+                                            salt and pepper&mdash;to taste.</p>
+                                        <p class="card-text lato_13">Among vegans and people who just try to adhere to the principles of proper nutrition, avocado paste is extremely popular. In addition, it is ideal for fasting. And in general, anyone can make this dish to please themselves with a delicious treat.</p>
+                                    </div>
+
+
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_br4" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_br4"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btnbr4" class="greenbtn btn btn-outline-primary" for="btncheck_br4" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br4" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_br4'>$12.99</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/cereals-563796_640.jpg"  id='img_br5' class="card-img-top" alt="Muesli" title='Muesli'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_br5'>Muesli</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_br5'>Calorie content 279 kcal<br>
+                                            Protein 5 g<br>
+                                            Fat 13.2 g<br>
+                                            Carbohydrates 34.9<br>
+                                            Dietary fiber 5.5 g<br>
+                                            Water 39 g</p>
+
+                                        <input id='ch5' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId5" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId5Label' for="ch5" class='lato_40'>...</label>
+                                        <div id='myDivId5' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">1 tbsp oatmeal;<br>
+                                                1 tbsp brown sugar;<br>
+                                                300 g dates;<br>
+                                                2 bananas;<br>
+                                                4 tbsp peanut butter;<br>
+                                                1/2 tbsp pine nuts;<br>
+                                                2 tbsp coconut shavings.</p>
+                                            <p class="card-text lato_13">Muesli is the most popular product recommended for making a healthy and healthy breakfast. Hearty, light, inexpensive muesli, prepared at home according to one of the many recipes, is a boost of energy for the whole day.</p>
+                                        </div>
+    
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_br5" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_br5"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnbr5" class="greenbtn btn btn-outline-primary" for="btncheck_br5" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br5" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_br5'>$3.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/pancakes-2020863_640.jpg"  id='img_br6' class="card-img-top" alt="Sushi set" title='Sushi set'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_br6'>Sushi set</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_br6'>Calorie content 388.3 kcal<br></p>
+
+                                        <input id='ch6' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId6" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId6Label' for="ch6" class='lato_40'>...</label>
+                                        <div id='myDivId6' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey"></p>
+                                            <p class="card-text lato_13">Philadelphia light syake, California kappa maki with caviar, Lava with salmon, Sakura, Olivier tempura, Banzai roll, Lava with crab, Tender with chicken, Mr. krabs, Futomaki chicken.</p>
+                                        </div>
+
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_br6" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_br6"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnbr6" class="greenbtn btn btn-outline-primary" for="btncheck_br6" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br6" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_br6'>$9.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/brown-eggs-3217675_640.jpg"  id='img_br7' class="card-img-top" alt="Boiled egg" title='Boiled egg'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_br7'>Boiled egg</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_br7'></p>
+
+                                    <input id='ch7' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId7" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId7Label' for="ch7" class='lato_40'>...</label>
+                                    <div id='myDivId7' class="ShowOrHide">
+                                        <p class="lato_13 _darkgrey"></p>
+                                        <p class="card-text lato_13">Boiled eggs are the simplest breakfast dish. It is enough to cook them to the desired degree of readiness, hard-boiled or "in a bag", and add salt to taste.</p>
+                                    </div>
+
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_br7" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_br7"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btnbr7" class="greenbtn btn btn-outline-primary" for="btncheck_br7" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br7" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_br7'>$0.99</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/bread-101636_640.jpg"  id='img_br8' class="card-img-top" alt="Egg, avocado and tomatoes" title='Egg, avocado and tomatoes'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_br8'>Egg, avocado and tomatoes</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_br8'></p>
+
+                                        <input id='ch8' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId8" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId8Label' for="ch8" class='lato_40'>...</label>
+                                        <div id='myDivId8' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">Egg, avocado and tomatoese</p>
+                                            <p class="card-text lato_13">Avocado and eggs are a great combination of taste and health. These products have a lot in common, mostly a similar shape. Both are sensitive to touch and quickly deteriorate. Both go well with many other ingredients, including basil, bacon, zucchini, etc
+                                                . Both are light, go well with sweet dishes, and make perfect meals to eat at any time of the day.</p>
+                                        </div>
+    
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_br8" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_br8"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnbr8" class="greenbtn btn btn-outline-primary" for="btncheck_br8" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br8" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_br8'>$12.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/breakfast-456351_640.jpg" id='img_br9' class="card-img-top" alt="Boiled potatoes with dill" title='Boiled potatoes with dill'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_br9'>Boiled potatoes with dill</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_br9'><br></p>
+
+                                        <input id='ch9' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId9" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId9Label' for="ch9" class='lato_40'>...</label>
+                                        <div id='myDivId9' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">Potatoes<br>dill</p>
+                                            <p class="card-text lato_13">Together with a vegetable salad or pickles, boiled potatoes with dill can be served as a separate dish or as a side dish to meat and fish snacks. Despite the simplicity of cooking, it will be the highlight of any festive table.</p>
+                                        </div>
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_br9" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_br9"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnbr9" class="greenbtn btn btn-outline-primary" for="btncheck_br9" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_br9" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_br9'>$3.49</span>
+                                    </div>
+                                </div>
+                            </div>br
+                        </div>
+                      </div>
+                    </div>
+                    <div class = 'carousel-footer'>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+
+                <!-- /*Lunch*/ -->
+                <div class="main_menu_select_your_food_time">
+                    <img class = "logo_50" src="images/Potoshop/Logo2.png"  alt="Our restaurant logo" title='Our restaurant logo'>
+                    <div class="lato_25 main_menu_select_your_food_time_t">Lunch</div>
+                    <div class = "lato_13 main_menu_select_your_food_result_t">Your search results listed bellow</div>
+                </div>
+
+                <div id="carouselExampleDark_lunch" class="carousel carousel-dark" data-bs-ride="carousel">                    
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/meal-918638_640.jpg" id='img_la1' class="card-img-top" alt="Roast pork with vegetables" title='Roast pork with vegetables'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_la1'>Roast pork with vegetables</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_la1'>Calorie content 185.8 kcal<br>
+                                        Protein 6.5 g<br>
+                                        Fat 16.4 g<br>
+                                        Carbohydrates 3.1 g<br>
+                                        Dietary fiber 1.2 g<br>
+                                        Water 72 g</p>
+
+
+                                    <input id='ch10' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId10" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId10Label' for="ch10" class='lato_40'>...</label>
+                                    <div id='myDivId10' class="ShowOrHide">
+                                        <p class="lato_13 _darkgrey">Lean pork&mdash;700-900 gr.<br>
+                                            Carrot.<br>
+                                            Onion&mdash;2 heads.<br>
+                                            Bell pepper.<br>
+                                            Tomatoes&mdash;2-4 pcs.<br>
+                                            Garlic cloves-3-4 pcs.<br>
+                                            Parsley&mdash;a few sprigs.<br>
+                                            Paprika, ground pepper-1/2 teaspoon each.<br>
+                                            Hot red pepper&mdash;¼ teaspoon.<br>
+                                            Salt, sunflower oil.</p>
+                                        <p class="card-text lato_13">There are no special difficulties in cooking pork with vegetables in a frying pan, even if the recipe surprises with an unusual composition of products. The main task is to preserve the juiciness of the meat, to make it soft. And vegetables will perfectly complement or serve as a side dish. Everything is so simple that you can safely let your imagination run wild, experiment with spices and a bouquet of vegetables.
+                                        </p>
+    
+                                    </div>
+
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_la1" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_la1"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btnla1" class="greenbtn btn btn-outline-primary" for="btncheck_la1" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la1" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_la1'>$19.99</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/tarte-2409958_640.jpg" id='img_la2' class="card-img-top" alt="Fish and seafood pie" title='Fish and seafood pie'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_la2'>Fish and seafood pie</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_la2'>Calorie content 206.9 kcal<br>
+                                            Protein 12 g<br>
+                                            Fat 9.2 g<br>
+                                            Carbohydrates 19.4 g</p>
+
+                                        <input id='ch11' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId11" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId11Label' for="ch11" class='lato_40'>...</label>
+                                        <div id='myDivId11' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">butter (cold) 150 g<br>
+                                                flour 260 g<br>
+                                                egg 1 piece<br>
+                                                sour cream 1 tbsp<br>
+                                                salt pinch</p>
+                                            <p class="card-text lato_13">Pie as a main dish or as a snack-I do it with various fish-pike, tilapia, pangasius-always delicious! Especially delicious in cold form, very good with a picnic, children eat with pleasure, satisfying and not hard-try it?</p>
+                                        </div>
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_la2" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_la2"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnla2" class="greenbtn btn btn-outline-primary" for="btncheck_la2" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la2" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_la2'>$23.49</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/soup-918422_640.jpg" id='img_la3' class="card-img-top" alt="Potato soup" title='Potato soup'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_la3'>Potato soup</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_la3'>Calorie content 50.6 kcal<br>
+                                            Proteins 1.3 g<br>
+                                            Fat 1.1 g<br>
+                                            Carbohydrates 9.4 g<br>
+                                            Dietary fiber 1.1 g<br>
+                                            Water 117 g</p>
+                                        <input id='ch12' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId12" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId12Label' for="ch12" class='lato_40'>...</label>
+                                        <div id='myDivId12' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">Water&mdash;1.5 l<br>
+                                                Potatoes&mdash;4 pcs.<br>
+                                                Carrots&mdash;2 pcs.<br>
+                                                Onion&mdash;1 pc.<br>
+                                                Celery&mdash;1 pc.<br>
+                                                Parsnip (optional)&mdash;1 pc.<br>
+                                                Parsley-0.5 bunch<br>
+                                                Vegetable oil&mdash;2 tablespoons<br>
+                                                Yolk&mdash;1 pc.<br>
+                                                Sour cream-0.5 cups</p>
+                                            <p class="card-text lato_13">Potato soup is familiar to us from childhood. Hearty, nutritious-the recipe for potato soup is simple. But you can also make potato soup with imagination.</p>
+   
+                                        </div>
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_la3" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_la3"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnla3" class="greenbtn btn btn-outline-primary" for="btncheck_la3" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la3" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_la3'>$7.49</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/potato-soup-2152254_640.jpg"  id='img_la4' class="card-img-top" alt="Pea soup" title='Pea soup'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_la4'>Pea soup</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_la4'>Calorie content 51.3 kcal 3.34%
+                                        Protein 4.5 g<br>
+                                        Fat 0.5 g<br>
+                                        Carbohydrates 7.1 g<br>
+                                        Dietary fiber 1.7 g<br>
+                                        Water 85 g</p>
+
+                                    <input id='ch13' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId13" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId13Label' for="ch13" class='lato_40'>...</label>
+                                    <div id='myDivId13' class="ShowOrHide">
+
+                                        <p class="lato_13 _darkgrey">Dried crushed peas&mdash;2 cups<br>
+                                            Beef with a bone&mdash;1 kg<br>
+                                            Carrots&mdash;2 pcs.<br>
+                                            Onion&mdash;2 pcs.<br>
+                                            Ground pepper&mdash;1 pinch<br>
+                                            Salt&mdash;1 tablespoon<br>
+                                            Water&mdash;3 liters</p>
+                                        <p class="card-text lato_13">Pea soup has an incomparable taste, usually it is prepared from dried peas thick, with the addition of cream, smoked meat and croutons.</p>
+    
+                                    </div>
+
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_la4" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_la4"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btnla4" class="greenbtn btn btn-outline-primary" for="btncheck_la4" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la4" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_la4'>$12.49</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/fish-3483465_640.jpg"  id='img_la5' class="card-img-top" alt="Fried crucian carp" title='Fried crucian carp'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_la5'>Fried crucian carp</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_la5'>Calorie content 121.3 kcal<br>
+                                            Protein 16.7 g<br>
+                                            Fat 5.4 g<br>
+                                            Carbohydrates 1.4 g</p>
+
+                                        <input id='ch14' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId14" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId14Label' for="ch14" class='lato_40'>...</label>
+                                        <div id='myDivId14' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">Crucian carp&mdash;2 pcs.<br>
+                                                Salt-1-2 teaspoons<br>
+                                                Lemon juice&mdash;1 tablespoon<br>
+                                                Garlic&mdash;2-4 cloves<br>
+                                                Frying oil&mdash;150-200 ml<br>
+                                                Oil for filling&mdash;1 tbsp. spoon</p>
+                                            <p class="card-text lato_13">Crucians are very tasty fish, but these bones! However, if you cut the back of the fish in a special way, you will get a crispy fried fish, in which there will be almost no bones.</p>
+                                        </div>
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_la5" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_la5"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnla5" class="greenbtn btn btn-outline-primary" for="btncheck_la5" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la5" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_la5'>$18.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/meal-918638_640.jpg" id='img_la6' class="card-img-top" alt="Roast pork with vegetables" title='Roast pork with vegetables'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_la6'>Roast pork with vegetables</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_la6'>Calorie content 185.8 kcal<br>
+                                            Protein 6.5 g<br>
+                                            Fat 16.4 g<br>
+                                            Carbohydrates 3.1 g<br>
+                                            Dietary fiber 1.2 g<br>
+                                            Water 72 g</p>
+
+                                        <input id='ch15' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId15" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId15Label' for="ch15" class='lato_40'>...</label>
+                                        <div id='myDivId15' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">Lean pork&mdash;700-900 gr.<br>
+                                                Carrot.<br>
+                                                Onion&mdash;2 heads.<br>
+                                                Bell pepper.<br>
+                                                Tomatoes&mdash;2-4 pcs.<br>
+                                                Garlic cloves-3-4 pcs.<br>
+                                                Parsley&mdash;a few sprigs.<br>
+                                                Paprika, ground pepper-1/2 teaspoon each.<br>
+                                                Hot red pepper&mdash;¼ teaspoon.<br>
+                                                Salt, sunflower oil.</p>
+                                            <p class="card-text lato_13">There are no special difficulties in cooking pork with vegetables in a frying pan, even if the recipe surprises with an unusual composition of products. The main task is to preserve the juiciness of the meat, to make it soft. And vegetables will perfectly complement or serve as a side dish. Everything is so simple that you can safely let your imagination run wild, experiment with spices and a bouquet of vegetables.
+                                            </p>
+                                        </div>
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_la6" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_la6"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnla6" class="greenbtn btn btn-outline-primary" for="btncheck_la6" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la6" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_la6'>$19.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/salad-2068210_640.jpg" id='img_la7' class="card-img-top" alt="Arugula salad with cheese" title='Arugula salad with cheese'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_la7'>Arugula salad with cheese</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_la7'>Calorie content 149.5 kcal<br>
+                                        Protein 6.4 g<br>
+                                        Fat 12.7 g<br>
+                                        Carbohydrates 2.7 g<br>
+                                        Dietary fiber 1 g<br>
+                                        Water 76 g</p>
+
+                                    <input id='ch16' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId16" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId16Label' for="ch16" class='lato_40'>...</label>
+                                    <div id='myDivId16' class="ShowOrHide">
+                                        <p class="lato_13 _darkgrey">Arugula leaves-80 g;<br>
+                                            Shrimp&mdash;300 g;<br>
+                                            Cherry tomatoes-60 g;<br>
+                                            Parmesan (optional)&mdash;40 g;<br>
+                                            Pine nuts&mdash;30 g;<br>
+                                            Olive oil and wine vinegar for dressing&mdash;to taste</p>
+                                        <p class="card-text lato_13">The combination of mozzarella, chicken breast, persimmon, walnuts and arugula just fascinated me.</p>
+                                    </div>
+
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_la7" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_la7"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btnla7" class="greenbtn btn btn-outline-primary" for="btncheck_la7" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la7" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_la7'>$4.49</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/beef-20678_640.jpg" id='img_la8' class="card-img-top" alt="Chops with fried potatoes" title='Chops with fried potatoes'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_la8'>Chops with fried potatoes</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_la8'>Calorie content 185.8 kcal 12.11%
+                                            Protein 15.9 g<br>
+                                            Fat 8.1 g<br>
+                                            Carbohydrates 12.1 g<br>
+                                            Dietary fiber 1.1 g<br>
+                                            Water 52 g</p>
+
+                                        <input id='ch17' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId17" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId17Label' for="ch17" class='lato_40'>...</label>
+                                        <div id='myDivId17' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey">Pork&mdash;500 g<br>
+                                                Eggs&mdash;3 pcs.<br>
+                                                Vegetable oil&mdash;60 ml<br>
+                                                Potatoes-500 g<br>
+                                                Hard cheese&mdash;100 g<br>
+                                                Salt&mdash;to taste<br>
+                                                Pepper-to taste<br>
+                                                Garlic&mdash;2 cloves<br>
+                                                Onion&mdash;1 pc.</p>
+                                            <p class="card-text lato_13">A delicious meat appetizer of pork in a potato crust will be the decoration of any festive table. The main thing is that the meat according to this recipe is prepared very easily and quickly.
+                                            </p>
+    
+                                        </div>
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_la8" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_la8"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btla8" class="greenbtn btn btn-outline-primary" for="btncheck_la8" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la8" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_la8'>$8.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/chicken-2451482_640.jpg" id='img_la9' class="card-img-top" alt="Сhicken legs" title='Сhicken legs'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_la9'>Сhicken legs</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_la9'>Calorie content 184 kcal<br>
+                                            Protein 24 g<br>
+                                            Fat 9 g<br>
+                                            Water 66 g</p>
+
+                                        <input id='ch18' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId18" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId18Label' for="ch18" class='lato_40'>...</label>
+                                        <div id='myDivId18' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey">Chicken drumsticks&mdash;8 pcs.<br>
+                                                Carrot&mdash;1 pc.<br>
+                                                Onion&mdash;1 pc.<br>
+                                                Garlic&mdash;1-2 cloves<br>
+                                                Sour cream&mdash;250 g<br>
+                                                Water (boiling water)&mdash;1 cup<br>
+                                                Sunflower oil for frying&mdash;60 ml<br>
+                                                Bay leaf&mdash;1 pc.<br>
+                                                Chicken seasoning&mdash;1 teaspoon<br>
+                                                Ground black pepper&mdash;to taste<br>
+                                                Salt&mdash;to taste</p>
+                                            <p class="card-text lato_13">Chicken legs-recipes are simple, affordable and very popular. Fried chicken legs in breadcrumbs, chicken legs in a sleeve in the oven or stewed chicken legs with potatoes in a slow cooker are perfect for a quick dinner. And for the holiday, it will be useful to learn how to bake chicken legs in dough, because chicken legs in a puff pastry bag look very appetizing, baked legs in puff pastry will decorate any festive table.
+                                            </p>
+                                        </div>
+
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_la9" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_la9"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btnla9" class="greenbtn btn btn-outline-primary" for="btncheck_la9" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_la9" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_la9'>$14.49</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class = 'carousel-footer'>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark_lunch" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark_lunch" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark_lunch" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark_lunch" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark_lunch" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- /*Dinner*/ -->
+                <div class="main_menu_select_your_food_time">
+                    <img class = "logo_50" src="images/Potoshop/Logo2.png"  alt="Our restaurant logo" title='Our restaurant logo'>
+                    <div class="lato_25 main_menu_select_your_food_time_t">Dinner</div>
+                    <div class = "lato_13 main_menu_select_your_food_result_t">Your search results listed bellow</div>
+                </div>
+
+                <div id="carouselExampleDark_Dinner" class="carousel carousel-dark" data-bs-ride="carousel">                    
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/pumpkin-soup-2886322_640.jpg" id='img_di1' class="card-img-top" alt="Pumpkin soup" title='Pumpkin soup'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_di1'>Pumpkin soup</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_di1'>Calorie content 32.5 kcal<br>
+                                        Protein 1 g<br>
+                                        Fat 1.1 g<br>
+                                        Carbohydrates 4.6 g<br>
+                                        Dietary fiber 1 g<br>
+                                        Water 91 g</p>
+                                    <input id='ch19' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId19" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId19Label' for="ch19" class='lato_40'>...</label>
+                                    <div id='myDivId19' class="ShowOrHide">
+
+                                        <p class="lato_13 _darkgrey">Pumpkin&mdash;700 g<br>
+                                            Potatoes-2-3 pieces.<br>
+                                            Carrots-1-2 pcs.<br>
+                                            Onion&mdash;1 pc.<br>
+                                            Garlic&mdash;1-2 cloves<br>
+                                            Cream (20% fat content)&mdash;70 ml<br>
+                                            Olive oil&mdash;3 tablespoons<br>
+                                            Salt&mdash;to taste<br>
+                                            Pumpkin seeds (for serving)&mdash;to taste<br>
+                                            Water&mdash;350 ml</p>
+                                        <p class="card-text lato_13">Pumpkin soup is tender and beautiful, it has a lot of useful carotene. So when autumn comes, we buy a pumpkin, look for a recipe for pumpkin soup, and create an orange mood.</p>
+    
+                                    </div>
+    
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_di1" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_di1"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btndi1" class="greenbtn btn btn-outline-primary" for="btncheck_di1" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di1" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_di1'>$22.49</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/sandwich-434658_640.jpg" id='img_di2' class="card-img-top" alt="Burger" title='Burger'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_di2'>Burger</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_di2'>Calorie content 38 kcal <br>
+                                            Carbohydrates 8.7 g</p>
+                                        <input id='ch20' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId20" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId20Label' for="ch20" class='lato_40'>...</label>
+                                        <div id='myDivId20' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey">Minced meat (mixed (beef + pork))&mdash;600 g<br>
+                                                Onion&mdash;1 piece<br>
+                                                Water&mdash;50 ml<br>
+                                                Coriander-1/2 bunch.<br>
+                                                Parsley-1/2 bunch.<br>
+                                                Hops-suneli-1/2 tsp<br>
+                                                Salt-to taste<br>
+                                                Black pepper-to taste<br>
+                                                Garlic&mdash;1 piece</p>
+                                            <p class="card-text lato_13">In general, this is a very tasty full-fledged hot dish, and not a snack. I think it is very well suited for children's parties, and just for a delicious dinner.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_di2" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_di2"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btndi2" class="greenbtn btn btn-outline-primary" for="btncheck_di2" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di2" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_di2'>$8.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/tortellini-3137649_640.jpg" id = 'img_di3' class="card-img-top" alt="Dumplings" title='Dumplings'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_di3'>Dumplings</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_di3'>Calorie content 219 kcal 14.28%
+                                            Protein 9.9 g<br>
+                                            Fat 13.9 g<br>
+                                            Carbohydrates 13.5 g<br>
+                                            Dietary fiber 1 g<br>
+                                            Water 60 g</p>
+                                        <input id='ch21' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId21" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId21Label' for="ch21" class='lato_40'>...</label>
+                                        <div id='myDivId21' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey">Sifted wheat flour-500 g + for working with dough<br>
+                                                Hot water (70-75 degrees)&mdash;250 ml<br>
+                                                Egg (small)&mdash;1 pc.<br>
+                                                Salt&mdash;1 teaspoon without a slide<br>
+                                                Odorless vegetable oil&mdash;25 ml<br>
+                                                *
+                                                For filling:<br>
+                                                Meat (beef and pork)&mdash;550 g<br>
+                                                Onion&mdash;200 g<br>
+                                                Lard (optional, if the meat is lean)&mdash;30 g+<br>
+                                                Water&mdash;70-80 g (according to the consistency of minced meat)<br>
+                                                Salt&mdash;1 teaspoon without a slide<br>
+                                                Ground black pepper&mdash;to taste<br>
+                                                *
+                                                For cooking:<br>
+                                                Bay leaf&mdash;to taste<br>
+                                                Salt&mdash;to taste<br>
+                                                Black pepper peas&mdash;to taste<br>
+                                                Onion&mdash;1/4 pc.<br>
+                                                *
+                                                For serving:<br>
+                                                Butter&mdash;to taste</p>
+                                            <p class="card-text lato_13">Pelmeni is a famous dish of Russian cuisine, which has ancient Chinese, Finno-Ugric, Turkic and Slavic roots. The modern name comes from the Udmurt "pelnyan"&mdash;"bread ear". Analogues of dumplings exist in many cuisines of the world. The taste, richness and convenience of storage have made the dumplings extremely popular, ready-made dumplings can be bought at any grocery store. But, of course, the most delicious dumplings are homemade. In order to make delicious dumplings, first of all you need a good recipe for dumpling dough, a recipe for minced meat for dumplings and a little skill. Good recipes for homemade dumplings, recipes for dumpling dough, recipes for minced meat for dumplings, as well as answers to questions: how to make dumplings, how to cook dumplings, how much to cook dumplings, how to fry dumplings in a frying pan, how to bake dumplings in the oven, how to cook dumplings in a pot, lazy dumplings, you will find on our website.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_di3" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_di3"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btndi3" class="greenbtn btn btn-outline-primary" for="btncheck_di3" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di3" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_di3'>$24.49</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/grilled-chicken-1334632_640.jpg" id='img_di4' class="card-img-top" alt="Grilled chicken breast with vegetables" title='Grilled chicken breast with vegetables'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_di4'>Grilled chicken breast with vegetables</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_di4'>Calorie content 110.2 kcal<br>
+                                        Protein 19.2 g<br>
+                                        Fat 2.7 g<br>
+                                        Carbohydrates 2.3 g<br>
+                                        Dietary fiber 1.2 g<br>
+                                        Water 74 g</p>
+                                    <input id='ch22' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId22" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId22Label' for="ch22" class='lato_40'>...</label>
+                                    <div id='myDivId22' class="ShowOrHide">
+
+                                        <p class="lato_13 _darkgrey">Chili sauce-1 ½ cups<br>
+                                            Wine vinegar, red&mdash;½ cup<br>
+                                            Mustard&mdash;4 ½ tsp<br>
+                                            Minced garlic-2 cloves<br>
+                                            Chicken breasts with a bone&mdash;6 pcs. (250 g each)</p>
+                                        <p class="card-text lato_13">The minimum amount of ingredients for the marinade, low-fat chicken and ... the mood to grill the meat&mdash;that's all you need for a good dinner.</p>
+    
+                                    </div>
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_di4" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_di4"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btndi1" class="greenbtn btn btn-outline-primary" for="btncheck_di4" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di4" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_di4'>$10.49</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/osso-buco-2535546_640.jpg" id='img_di5' class="card-img-top" alt="Vegetable stew with meat" title='Vegetable stew with meat'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_di5'>Vegetable stew with meat</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_di5'>Calorie content 75.2 kcal 4.9%
+                                            Protein 5.3 g<br>
+                                            Fat 4.9 g<br>
+                                            Carbohydrates 2.4 g<br>
+                                            Dietary fiber 0.9 g<br>
+                                            Water 87 g</p>
+                                        <input id='ch23' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId23" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId23Label' for="ch23" class='lato_40'>...</label>
+                                        <div id='myDivId23' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey">Zucchini&mdash;1 pc.<br>
+                                                Bulgarian pepper&mdash;3 pcs.<br>
+                                                Hot pepper&mdash;1 pc.<br>
+                                                Tomatoes&mdash;4 pcs.<br>
+                                                Carrots&mdash;2 pcs.<br>
+                                                Onion&mdash;3 pcs.<br>
+                                                Garlic&mdash;5 cloves<br>
+                                                Dill<br>
+                                                Punch<br>
+                                                Tomato paste&mdash;5 tbsp<br>
+                                                Vegetable oil<br>
+                                                Ground coriander<br>
+                                                Ground black pepper<br>
+                                                Salt<br>
+                                                Bay leaf</p>
+                                            <p class="card-text lato_13">Vegetable stew with meat is familiar to everyone. To prepare a vegetable stew with meat, you need any meat, onions, carrots and any vegetables. In summer, they make a tender vegetable stew with meat and zucchini. When preparing a vegetable stew recipe with meat in winter, put potatoes, cabbage, canned peppers and tomatoes.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_di5" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_di5"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btndi5" class="greenbtn btn btn-outline-primary" for="btncheck_di5" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di5" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_di5'>$12.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/tarte-flambee-3391203_640.jpg" id='img_di6' class="card-img-top" alt="Pizza with red fish" title='Pizza with red fish'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_di6'>Pizza with red fish</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_di6'>Calorie content 270 kcal 17.6%
+                                            Protein 12 g<br>
+                                            Fat 15 g<br>
+                                            Carbohydrates 22 g</p>
+                                        <input id='ch24' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId24" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId24Label' for="ch24" class='lato_40'>...</label>
+                                        <div id='myDivId24' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey">1.5 tbsp wheat flour;<br> 100 g salted salmon;<br> 150 g mozzarella;<br> 2 tsp capers;<br> 1 onion;<br> 4 tbsp olive oil;<br> 100 ml boiled chilled water;<br> 1 tsp baking powder;<br> a few sprigs of dill.</p>
+                                            <p class="card-text lato_13">Pizza is an Italian flatbread with vegetable, cheese, mushroom and meat fillings. Its first recipe appeared in Italy in the XVI century. Also, as a filling, you can use red fish, for example, salmon.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_di6" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_di6"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btndi6" class="greenbtn btn btn-outline-primary" for="btncheck_di6" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di6" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_di6'>$34.49</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/delicious-1178513_640.jpg" id = 'img_di7' class="card-img-top" alt="Trout with new potatoes" title='Trout with new potatoes'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_di7'>Trout with new potatoes</h5>
+                                    <p class="card-text lato_13"  id='ingreediance_di7'>Calorie content 92.4 kcal<br>
+                                        Protein 6 g<br>
+                                        Fat 2.7 g<br>
+                                        Carbohydrates 10.6 g<br>
+                                        Dietary fiber 1.3 g<br>
+                                        Water 78 g</p>
+                                    <input id='ch25' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId25" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId25Label' for="ch25" class='lato_40'>...</label>
+                                    <div id='myDivId25' class="ShowOrHide">
+
+                                        <p class="lato_13 _darkgrey">Trout steak 2 pcs<br>
+                                            Potato 3-4 pieces<br>
+                                            Cheese 50 g<br>
+                                            Mayonnaise 2 tbsp<br>
+                                            Salt to taste<br>
+                                            Ground black pepper to taste</p>
+                                        <p class="card-text lato_13">Trout baked with potatoes in the oven under a cheese chicken, this is a great option for a delicious dinner for two.</p>
+    
+                                    </div>
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_di7" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_di7"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btndi7" class="greenbtn btn btn-outline-primary" for="btncheck_di7" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di7" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey id='price_di7'">$ 11.99</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/pasta-1330541_640.jpg" id='img_di8' class="card-img-top" alt="Pasta with mushrooms" title='Pasta with mushrooms'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_di8'>Pasta with mushrooms</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_di8'>Calorie content 101.8 kcal 6.64%
+                                            Protein 3.7 g<br>
+                                            Fat 4 g<br>
+                                            Carbohydrates 12.4 g<br>
+                                            Dietary fiber 1.7 g<br>
+                                            Water 77 g</p>
+                                        <input id='ch26' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId26" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId26Label' for="ch26" class='lato_40'>...</label>
+                                        <div id='myDivId26' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey">Spaghetti&mdash;200 g<br>
+                                                Mushrooms ( champignons)&mdash;300 g<br>
+                                                Onion&mdash;150 g<br>
+                                                Cream 10-15%&mdash;250 ml<br>
+                                                Salt&mdash;to taste<br>
+                                                Ground black pepper&mdash;to taste<br>
+                                                Vegetable oil&mdash;30 ml</p>
+                                            <p class="card-text lato_13">In this dish, a delicate and aromatic mushroom sauce with soft creamy notes is perfectly combined with spaghetti. Cooking spaghetti with mushrooms in a creamy sauce will take you very little time, and the result is a delicious and hearty dinner.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_di8" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_di8"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btndi8" class="greenbtn btn btn-outline-primary" for="btncheck_di8" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di8" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_di8'>$12.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/lasagna-3344997_640.jpg" id='img_di9' class="card-img-top" alt="Casserole with farfalle, pumpkin and beef" title='Casserole with farfalle, pumpkin and beef'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_di9'>Casserole with farfalle, pumpkin and beef</h5>
+                                        <p class="card-text lato_13"  id='ingreediance_di9'>
+                                            920 g<br>175 kcal (11/8/15 BZHU per 100g)
+                                            </p>
+                                        <input id='ch27' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId27" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId27Label' for="ch27" class='lato_40'>...</label>
+                                        <div id='myDivId27' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey">Pumpkin (pulp)&mdash;350 g<br>
+                                                Chicken fillet-500 g<br>
+                                                Pasta / Pasta (bows)&mdash;200 g<br>
+                                                Olive oil-2 tbsp. l<br>
+                                                . Butter&mdash;30 g<br>
+                                                Hot red pepper (small pods, to taste)&mdash;2 pcs<br>
+                                                Soy sauce (to taste)&mdash;2 tbsp<br>
+                                                Honey (to taste)&mdash;1 tbsp<br>
+                                                Salt (for cooking pasta)&mdash;to taste<br>
+                                                Garlic (large)&mdash;2 teeth.<br>
+                                                Cumin-0.5 tsp<br>
+                                                Coriander (whole)&mdash;0.5 tsp.<br>
+                                                </p>
+                                            <p class="card-text lato_13">Serve the macaroni grin "ZUCCA" dish in portions.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_di9" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_di9"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btndi9" class="greenbtn btn btn-outline-primary" for="btncheck_di9" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_di9" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_di9'>$14.49</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class = 'carousel-footer'>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark_Dinner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark_Dinner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark_Dinner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark_Dinner" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark_Dinner" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <!-- /*drinks*/ -->
+                <div class="main_menu_select_your_food_time">
+                    <img class = "logo_50" src="images/Potoshop/Logo2.png"  alt="Our restaurant logo" title='Our restaurant logo'>
+                    <div class="lato_25 main_menu_select_your_food_time_t">drinks</div>
+                    <div class = "lato_13 main_menu_select_your_food_result_t">Your search results listed bellow</div>
+                </div>
+
+                <div id="carouselExampleDark_drinks" class="carousel carousel-dark" data-bs-ride="carousel">                    
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/cappuccino-1869731_640.jpg"  id='img_dr1' class="card-img-top" alt="Cappuccino" title='Cappuccino'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_dr1'>Cappuccino</h5>
+                                    <p class="lato_13 _darkgrey" id='ingreediance_dr1'>Calorie content 50 kcal<br>
+                                        Protein 2.1 g<br>
+                                        Fat 2.6 g<br>
+                                        Carbohydrates 3.8 g</p>
+                                    <input id='ch28' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId28" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId28Label' for="ch28" class='lato_40'>...</label>
+                                    <div id='myDivId28' class="ShowOrHide">
+
+                                        <p class="lato_13 _darkgrey">coffee (espresso) - 60 ml;<br>
+                                            milk&mdash;60 ml;<br>
+                                            sugar&mdash;to taste.<br>
+                                            </p>
+                                        <p class="card-text lato_13">Cappuccino is an Italian espresso-based coffee drink. The classic version includes a double portion of black coffee, hot milk and thick milk foam, but some baristas use cream instead of the last two ingredients, and add cinnamon, chocolate chips, and orange zest to the drink.
+                                            Cappuccino has a mild taste with a slight coffee bitterness. If everything is done correctly, the drink should turn out to be sweet even without adding sugar (due to the fat milk foamed by the cappuccino machine).
+                                            </p>
+    
+                                    </div>
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_dr1" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_dr1"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btn1" class="greenbtn btn btn-outline-primary" for="btncheck_dr1" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr1" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_dr1'>$12.99</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/glass-1587258_640.jpg"  id='img_dr2' class="card-img-top" alt="Milk" title='Milk'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_dr2'>Milk</h5>
+                                        <p class="card-text lato_13">Calorie content 60 kcal 3.91%
+                                            Protein 2.9 g<br>
+                                            Fat 3.2 g<br>
+                                            Carbohydrates 4.7 g<br>
+                                            Water 88 g</p>
+                                        <input id='ch29' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId29" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId29Label' for="ch29" class='lato_40'>...</label>
+                                        <div id='myDivId29' class="ShowOrHide">
+                                            <p class="lato_13 _darkgrey" id='ingreediance_dr2'>Milk</p>
+                                            <p class="card-text lato_13"></p>
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_dr2" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_dr2"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btn2" class="greenbtn btn btn-outline-primary" for="btncheck_dr2" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr2" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_dr2'>$12.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/carrot-juice-1623157_640.jpg"  id='img_dr3' class="card-img-top" alt="Carrot juice" title='Carrot juice'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_dr3'>Carrot juice</h5>
+                                        <p class="card-text lato_13">Calories : 40 kcal<br>
+                                            Protein: 0.95 g<br>
+                                            Fat: 0.15 g<br>
+                                            Carbohydrates: 9.28 g<br>
+                                            Dietary fibers: 0.8 g<br>
+                                            Cholesterol: 0 mg</p>
+                                        <input id='ch30' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId30" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId30Label' for="ch30" class='lato_40'>...</label>
+                                        <div id='myDivId30' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey" id='ingreediance_dr3'>carrot 1 kg<br>
+                                                sugar syrup 10 % to taste<br>
+                                                citric acid to taste</p>
+                                            <p class="card-text lato_13">Carrot juice has a particularly high content of β-carotene, a source of vitamin A, but it is also high in B complex vitamins like folate, and many minerals including calcium, copper, magnesium, potassium, phosphorus, and iron. A pound (454 g) of carrots will yield about a cup of juice (about 236 ml)[citation needed], which is a low yield compared to fruits like apples and oranges. However, carrot pulp is very tough; the main difficulty in juicing carrots is in separating the pulp from the juice.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_dr3" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_dr3"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btn3" class="greenbtn btn btn-outline-primary" for="btncheck_dr3" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr3" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_dr3'>$12.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/sparkling-wine-1030754_640.jpg"  id='img_dr4' class="card-img-top" alt="Sparkling wine" title='Sparkling wine'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_dr4'>Sparkling wine</h5>
+                                    <p class="card-text lato_13"></p>
+                                    <input id='ch31' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId31" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId31Label' for="ch31" class='lato_40'>...</label>
+                                    <div id='myDivId31' class="ShowOrHide">
+
+                                        <p class="lato_13 _darkgrey" id='ingreediance_dr4'>Sparkling wine</p>
+                                        <p class="card-text lato_13">Sparkling wine is a wine with a significant amount of carbon dioxide in it, which makes it carbonated. Although the phrase usually refers to champagne , EU, countries by law retain this term for products produced exclusively in the Champagne region of France. Sparkling wine is usually white or pink, but there are examples of red sparkling wines, such as Brachet, Bonarda and Lambrusco, and Australian sparkling Shiraz . The sweetness of sparkling wine can range from very dry brut styles to the sweeter du varieties (French for "hard" and "soft", respectively).</p>
+    
+                                    </div>
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_dr4" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_dr4"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btn4" class="greenbtn btn btn-outline-primary" for="btncheck_dr4" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr4" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_dr4'>$12.99</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/margarita-1839361_640.jpg"  id='img_dr5' class="card-img-top" alt="Margarita" title='Margarita'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_dr5'>Margarita</h5>
+                                        <p class="card-text lato_13">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                                        <input id='ch32' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId32" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId32Label' for="ch32" class='lato_40'>...</label>
+                                        <div id='myDivId32' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey" id='ingreediance_dr5'>silver tequila&mdash;40 ml;<br>
+                                                orange liqueur&mdash;20 ml;<br>
+                                                lime juice&mdash;40 ml;<br>
+                                                ice&mdash;150 grams.</p>
+                                            <p class="card-text lato_13">More than sixty years have passed since the Margarita cocktail appeared in Mexico. Now it is prepared in all corners of the Earth. Thanks to its simple composition and excellent taste, this cocktail is considered one of the most popular in the world. I will teach you how to make a "Margarita" at home.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_dr5" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_dr5"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btn5" class="greenbtn btn btn-outline-primary" for="btncheck_dr5" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr5" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_dr5'>$15.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/rose-1024710_640.jpg"  id='img_dr6' class="card-img-top" alt="Rose wine" title='Rose wine'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_dr6'>Rose wine</h5>
+                                        <p class="card-text lato_13"></p>
+                                        <input id='ch33' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId33" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId33Label' for="ch33" class='lato_40'>...</label>
+                                        <div id='myDivId33' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey" id='ingreediance_dr6'>Rose wine</p>
+                                            <p class="card-text lato_13">Spring is a state of mind. When the day is gaining momentum, through the dry, fallen leaves in autumn, the grass breaks through, and the sun's rays warm the air, somewhere in the wine cellars of Provence, such an unusual and exquisite rose wine matures. It has gained high popularity on hot days due to its lightness, freshness and unobtrusiveness.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_dr6" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_dr6"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btn6" class="greenbtn btn btn-outline-primary" for="btncheck_dr6" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr6" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_dr6'>$22.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-3 g-1">
+                            <div class="col">
+                                <div class="card h-100">
+                                <img src="images/mainmenu/irish-whiskey-2152126_640.jpg"  id='img_dr7' class="card-img-top" alt="Irish whiskey" title='Irish whiskey'>
+                                <div class="card-body">
+                                    <h5 class="card-title alice_25 _darkgrey" id='name_dr7'>Irish whiskey</h5>
+                                    <p class="card-text lato_13"></p>
+                                    <input id='ch34' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId34" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                    <label id='myDivId34Label' for="ch34" class='lato_40'>...</label>
+                                    <div id='myDivId34' class="ShowOrHide">
+                                        <p class="lato_13 _darkgrey" id='ingreediance_dr7'>Irish whiskey</p>
+                                        <p class="card-text lato_13">Irish whiskey (Irl. uisce beathadh&mdash;water of life[1]) - whiskey produced in Ireland. Irish whiskey is one of the oldest spirits in Europe. The first mention of it dates back to the middle of the XII century. Most varieties of Irish whiskey are triple distilled, unlike in Scotland, where this method is rarely used. When drying malt used for the production of Irish whiskey, peat is rarely used, so the taste of smoke, characteristic of many Scottish varieties, is extremely rare in Irish whiskey.</p>
+                                    </div>
+                                    <div class="user_reiting">
+                                        <p class="lato_13 _darkgrey" >Customer Review</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                        <input type="checkbox" class="btn-check"  id="btncheck_dr7" autocomplete="off">
+                                        <label class="notyetselect btn btn-outline-primary" for="btncheck_dr7"title='Add a dish to an order'>Add to list</label>
+                                        <label id="greenbtn_for_btn7" class="greenbtn btn btn-outline-primary" for="btncheck_dr7" title='Deselect a dish'>selected</label>
+                                        <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr7" title='Deselect a dish'>X</label>
+                                    </div>
+                                    <span class="lato_25 _darkgrey" id='price_dr7'>$12.99</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/alcohol-1961542_640.jpg"  id='img_dr8' class="card-img-top" alt="Whiskey" title='Whiskey'>
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey"id='name_dr8'>Whiskey</h5>
+                                        <p class="card-text lato_13"></p>
+                                        <input id='ch35' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId35" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId35Label' for="ch35" class='lato_40'>...</label>
+                                        <div id='myDivId35' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey" id='ingreediance_dr8'>Whiskey</p>
+                                            <p class="card-text lato_13">Whiskey (English: whisky or whiskey&mdash;a strong aromatic alcoholic drink obtained from various types of grain using the processes of malting, fermentation, distillation and long-term aging in oak barrels. In the production of whiskey, barley, rye, wheat or corn can be used. In Brittany, buckwheat whisky is also made. [3] The alcohol content is usually 32-50% by volume, but some whiskies have a high strength (up to 60 % by volume). The color of the drink varies from light yellow to brown, the sugar content is zero or extremely insignificant. The traditional regions producing whisky are Scotland and Ireland.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_dr8" autocomplete="off">
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_dr8"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btn8" class="greenbtn btn btn-outline-primary" for="btncheck_dr8" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr8" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_dr8'>$12.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/mainmenu/rum-3898745_640.jpg" class="card-img-top" alt="Rum" id='img_dr9' title="Rum">
+                                    <div class="card-body">
+                                        <h5 class="card-title alice_25 _darkgrey" id='name_dr9'>RUM</h5>
+                                        <p class="card-text lato_13"></p>
+                                        <input id='ch36' type="checkbox" class="ShowOrHide checkboxMenu" value="myDivId36" checked onclick="myShowOrHide($(this).attr('id'),$(this).val());"/>
+                                        <label id='myDivId36Label' for="ch36" class='lato_40'>...</label>
+                                        <div id='myDivId36' class="ShowOrHide">
+
+                                            <p class="lato_13 _darkgrey" id='ingreediance_dr9'>Rum</p>
+                                            <p class="card-text lato_13">Rum (English rum, Spanish ron, French rhum) is a strong alcoholic beverage made by fermenting and distilling by-products of sugar cane production, such as molasses and cane syrup. The clear liquid obtained after distillation is usually then aged in oak or other barrels. Although rum production is available in Australia, India, Reunion, and many other places around the world, most of the world's rum is produced in the Caribbean and along the Demerara River in South America.</p>
+    
+                                        </div>
+                                        <div class="user_reiting">
+                                            <p class="lato_13 _darkgrey" >Customer Review</p>
+                                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                            <input type="checkbox" class="btn-check"  id="btncheck_dr9" autocomplete="off")>
+                                            <label class="notyetselect btn btn-outline-primary" for="btncheck_dr9"title='Add a dish to an order'>Add to list</label>
+                                            <label id="greenbtn_for_btn9" class="greenbtn btn btn-outline-primary" for="btncheck_dr9" title='Deselect a dish'>selected</label>
+                                            <label class="btn btn-outline-primary redbtn selectrecipe"  for="btncheck_dr9" title='Deselect a dish'>X</label>
+                                        </div>
+                                        <span class="lato_25 _darkgrey" id='price_dr9'>$20.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class = 'carousel-footer'>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark_drinks" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark_drinks" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark_drinks" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark_drinks" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark_drinks" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="main_menu_select_your_food">
+                <div class = "main_menu_select_your_food_title_big">
+                    <H5 class = "lato_20">Completed your search, yapee!</H5>
+                    <p class="lato_13">Now one more step to order your special treat</p>
+                </div>
+                <button title='Go to the order page' class="red_button main_menu_select_your_food_button" type="button" onclick="swa_orders('br','1');">
+                    ORDER NOW
+                </button>                
+            </div>
+        </div>
+
+
+
+        <div class="WeAreInYouCity">
+            <div class="Table_Number"><!-- mainmenu_Table_Number -->
+                <div class="WeAreInYouCity_Text">
+                    <div>
+                        we are<br><span>at your city
+                    </div>
+                </div>
+                <div class="Table_Number_Red_Right" style="flex-basis: 613px;">
+                    <div class='WeAreInYouCity_inputs lato_13'>
+                        <input class='WeAreInYouCity_input WeAreInYouCity_input_city' id = "yourcity" type="text" name="yourcity" placeholder="Enter your city name..." >
+                        <input class='WeAreInYouCity_input WeAreInYouCity_input_code' id = "yourpincode" type="text" name="yourpincode" placeholder="Enter your pin code" >
+                        <button class="WhiteBatton WeAreInYouCity_batton" type="button">
+                            find Now
+                        </button>
+                    </div>
+                </div>
+                </div>
+            <section class="map">
+                <div class="container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.07364075986!2d27.439919915250705!3d53.894895041182544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbdadba0301f61%3A0x6ead263c4a72acf3!2z0YPQuy4g0K_QutGD0LHQvtCy0YHQutC-0LPQviA3OCwg0JzRltC90YHQug!5e0!3m2!1sru!2sby!4v1619886301024!5m2!1sru!2sby" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
+        </div>
+    </content>
+    <footer class="footer_base">
+        <div class="footer_logo">
+            <a href="#top"><img src="images/Potoshop/Logo_footer.png" alt="Our restaurant logo" title='Our restaurant logo'></a>
+        </div>
+        <div class="footer">
+            <div class='Designed'>Exclusively designed by  Olga Miranovich</div>
+            <ul class="social_network social_network_footer">
+                <li><a href="https://ru-ru.facebook.com/" class="link fab fa-facebook-f" target="_blank" title='Go to the facebook page'></a></li>
+                <li><a href="https://twitter.com/" class="link fab fa-twitter" target="_blank" title='Go to the twitter page'></a></li>
+                <li><a href="https://www.linkedin.com/" class="link fab fa-linkedin" target="_blank" title='Go to the linkedin page'></a></li>
+            </ul>
+            <div class="_Year" >2021 Awesome Spices Psd Layout</div>
+        </div>
+    </footer>
+    <div id="tooltip"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.WeAreInYouCity_inputs button').on('click', function(){ 
+            if ($(this).attr("onClick") === undefined)  {
+    	    window.location.href = ($(this).attr('url') === undefined)?'main404.html':$(this).attr('url');
+        }
+        });})
+
+        $(document).ready(function(){$('.btn-check').on('click', function(){ 
+            putSelectMenu($(this).attr("id"));
+        })
+        });
+
+        $("button").mousemove(function (eventObject) {
+            $data_tooltip = $(this).attr("data-tooltip") === undefined?"The button's action has not yet been described. Go to 404.":$(this).attr("data-tooltip");
+            if ($(this).attr("onClick") === undefined) 
+                if ($(this).attr('url') === undefined) 
+                $("#tooltip").html($data_tooltip)
+                    .css({ 
+                        "top" : eventObject.pageY + 10,
+                        "left" : eventObject.pageX -250
+                    })
+                    .show();
+                }).mouseout(function () {
+                    $("#tooltip").hide()
+                    .html("")
+                    .css({
+                        "top" : 0,
+                        "left" : 0
+                    });
+        });
+
+        
+
+        
+    </script>
+</body>
+</html>
